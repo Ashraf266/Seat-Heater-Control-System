@@ -1,0 +1,94 @@
+/* Kernel includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+
+/* MCAL includes. */
+#include "gpio.h"
+#include "uart0.h"
+
+#define GREEN_LED 0
+#define RED_LED   1
+
+/* New type to hold task information */
+typedef struct
+{
+    const uint8 * pcTextForTask;
+    uint8_t ucLed;
+} TaskInformation;
+
+TaskInformation task1 = { /* pcTextForTask */  "Green LED Task is running\r\n",
+                          /* ucLed */          GREEN_LED
+                        };
+
+TaskInformation task2 = { /* pcTextForTask */  "Red LED Task is running\r\n",
+                          /* ucLed */          RED_LED
+                        };
+
+#define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND 369
+
+void Delay_MS(unsigned long long n)
+{
+    volatile unsigned long long count = 0;
+    while(count++ < (NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND * n) );
+}
+
+/* The HW setup function */
+static void prvSetupHardware( void );
+
+/* FreeRTOS tasks */
+void vPeriodicTask(void *pvParameters);
+
+int main()
+{
+    /* Setup the hardware for use with the Tiva C board. */
+    prvSetupHardware();
+
+    /* Create Tasks here */
+	xTaskCreate(vPeriodicTask, "Task 1", 256, (void*)&task1, 1, NULL);
+	xTaskCreate(vPeriodicTask, "Task 2", 256, (void*)&task2, 1, NULL);
+
+	/* Now all the tasks have been started - start the scheduler.
+
+	NOTE : Tasks run in system mode and the scheduler runs in Supervisor mode.
+	The processor MUST be in supervisor mode when vTaskStartScheduler is 
+	called.  The demo applications included in the FreeRTOS.org download switch
+	to supervisor mode prior to main being called.  If you are not using one of
+	these demo application projects then ensure Supervisor mode is used here. */ 
+	vTaskStartScheduler();
+	
+	/* Should never reach here!  If you do then there was not enough heap
+	available for the idle task to be created. */
+	for (;;);
+	
+}
+
+
+static void prvSetupHardware( void )
+{
+	/* Place here any needed HW initialization such as GPIO, UART, etc.  */
+    GPIO_BuiltinButtonsLedsInit();
+    GPIO_GreenLedOn();
+    GPIO_RedLedOff();
+    UART0_Init();
+}
+
+void vPeriodicTask(void *pvParameters)
+{
+    TaskInformation * pTaskInformation = (TaskInformation *) pvParameters;
+    for (;;)
+    {
+        UART0_SendString(pTaskInformation -> pcTextForTask);
+        switch (pTaskInformation->ucLed)
+        {
+        case GREEN_LED:
+            GPIO_GreenLedToggle();
+            break;
+        case RED_LED:
+            GPIO_RedLedToggle();
+            break;
+        }
+        Delay_MS(1000);
+    }
+}
+
+/*-----------------------------------------------------------*/
