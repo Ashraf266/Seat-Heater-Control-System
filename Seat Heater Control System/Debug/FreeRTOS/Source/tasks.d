@@ -19,6 +19,8 @@ FreeRTOS/Source/tasks.obj: C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LT
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOSConfig.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/GPTM/GPTM.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h
+FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h
+FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/projdefs.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/portable.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/deprecated_definitions.h
@@ -28,6 +30,8 @@ FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Pro
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/list.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/timers.h
 FreeRTOS/Source/tasks.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/stack_macros.h
+FreeRTOS/Source/tasks.obj: C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
+FreeRTOS/Source/tasks.obj: C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h
 
 ../FreeRTOS/Source/tasks.c:
 
@@ -67,6 +71,10 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h:
 
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h:
+
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h:
+
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/projdefs.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/portable.h:
@@ -84,4 +92,8 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/timers.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/stack_macros.h:
+
+C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h:
+
+C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h:
 

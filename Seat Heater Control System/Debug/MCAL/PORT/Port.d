@@ -2,11 +2,11 @@
 
 MCAL/PORT/Port.obj: ../MCAL/PORT/Port.c
 MCAL/PORT/Port.obj: ../MCAL/PORT/Port.h
-MCAL/PORT/Port.obj: ../MCAL/PORT/Std_Types.h
-MCAL/PORT/Port.obj: ../MCAL/PORT/Platform_Types.h
-MCAL/PORT/Port.obj: ../MCAL/PORT/Compiler.h
+MCAL/PORT/Port.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h
+MCAL/PORT/Port.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h
+MCAL/PORT/Port.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h
 MCAL/PORT/Port.obj: ../MCAL/PORT/Port_Cfg.h
-MCAL/PORT/Port.obj: ../MCAL/PORT/Common_Macros.h
+MCAL/PORT/Port.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Common_Macros.h
 MCAL/PORT/Port.obj: ../MCAL/PORT/Port_Regs.h
 MCAL/PORT/Port.obj: ../MCAL/PORT/Det.h
 
@@ -14,15 +14,15 @@ MCAL/PORT/Port.obj: ../MCAL/PORT/Det.h
 
 ../MCAL/PORT/Port.h:
 
-../MCAL/PORT/Std_Types.h:
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h:
 
-../MCAL/PORT/Platform_Types.h:
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h:
 
-../MCAL/PORT/Compiler.h:
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h:
 
 ../MCAL/PORT/Port_Cfg.h:
 
-../MCAL/PORT/Common_Macros.h:
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Common_Macros.h:
 
 ../MCAL/PORT/Port_Regs.h:
 

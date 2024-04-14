@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Seat Heater Control System/MCAL/PORT/Std_Types.h&apos; to &apos;std_types.h&apos;" description="Rename resource &apos;Std_Types.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MCAL/PORT/Std_Types.h" name="std_types.h" stamp="1713124273285" updateReferences="true"/>
+</session>

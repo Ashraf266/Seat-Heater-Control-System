@@ -10,7 +10,7 @@
  ******************************************************************************/
 
 #ifndef DIO_H
-#define DIO_H
+#define DIO_Hz
 
 /* Id for the company in the AUTOSAR
  * for example Mohamed Tarek's ID = 1000 :) */

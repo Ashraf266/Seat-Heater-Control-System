@@ -1,5 +1,6 @@
 "./main.obj"
 "./tm4c123gh6pm_startup_ccs.obj"
+"./APP/app.obj"
 "./FreeRTOS/Source/event_groups.obj"
 "./FreeRTOS/Source/list.obj"
 "./FreeRTOS/Source/queue.obj"

@@ -1,0 +1,15 @@
+/*
+ * app_cfg.h
+ *
+ *  Created on: Apr 14, 2024
+ *      Author: Ashraf
+ */
+
+#ifndef APP_CFG_H_
+#define APP_CFG_H_
+
+
+#define DEBUGGING_MODE_ACTIVATED            (1u)
+
+
+#endif

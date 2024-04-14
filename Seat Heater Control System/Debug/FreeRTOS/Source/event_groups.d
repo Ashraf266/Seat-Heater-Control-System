@@ -17,6 +17,8 @@ FreeRTOS/Source/event_groups.obj: C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOSConfig.h
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/GPTM/GPTM.h
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h
+FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h
+FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/projdefs.h
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/portable.h
 FreeRTOS/Source/event_groups.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/deprecated_definitions.h
@@ -60,6 +62,10 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/GPTM/GPTM.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h:
+
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h:
+
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/projdefs.h:
 

@@ -69,8 +69,11 @@
 /* Set the following INCLUDE_* constants to 1 to include the named API function,
  * or 0 to exclude the named API function.  Most linkers will remove unused
  * functions even when the constant is 1. */
-#define INCLUDE_vTaskDelayUntil               1
-#define INCLUDE_vTaskDelay               1
+#define INCLUDE_vTaskDelayUntil                 1
+
+#define INCLUDE_vTaskDelay                      1
+
+#define INCLUDE_vTaskSuspend                    1
 /******************************************************************************/
 /* Hook and callback function related definitions. ****************************/
 /******************************************************************************/
@@ -115,8 +118,35 @@ PRIORITY THAN THIS! (higher priorities are lower numeric values. */
 #define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }
 
 /******************************************************************************/
-/* RTOS Runtime Measurements. *************************************************/
+/* FreeRTOS Runtime Statistics. ***********************************************/
 /******************************************************************************/
+
+/* Set configGENERATE_RUN_TIME_STATS to 1 to enable collection of run-time statistics.
+ * When this is done, both portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()
+ * and portGET_RUN_TIME_COUNTER_VALUE() or portALT_GET_RUN_TIME_COUNTER_VALUE(x) must also be defined. */
+#define configGENERATE_RUN_TIME_STATS 1
+
+/* portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() is defined to call the function that initializes
+   the 32-bit timer */
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() GPTM_WTimer0Init()
+
+/* portGET_RUN_TIME_COUNTER_VALUE() is defined to get the current run-time
+ * timer value. The returned time value is 32-bits long, and is formed by subtracting the
+ * current timer value from its max value because of our timer is counting down  */
+#define portGET_RUN_TIME_COUNTER_VALUE()  GPTM_WTimer0Read()
+
+/* Set to 1 to include the vTaskList() and vTaskGetRunTimeStats() functions in
+ * the build.  Set to 0 to exclude these functions from the build.  These two
+ * functions introduce a dependency on string formatting functions that would
+ * otherwise not exist - hence they are kept separate.  Defaults to 0 if left
+ * undefined. */
+#define configUSE_STATS_FORMATTING_FUNCTIONS 1
+
+/* Set configUSE_TRACE_FACILITY to include additional task structure members
+ * are used by trace and visualization functions and tools.  Set to 0 to exclude
+ * the additional information from the structures. Defaults to 0 if left
+ * undefined. */
+#define configUSE_TRACE_FACILITY             1
 
 
 #endif /* FREERTOS_CONFIG_H */

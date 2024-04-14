@@ -1,0 +1,186 @@
+/*
+ * app.c
+ *
+ *  Created on: Apr 14, 2024
+ *      Author: Ashraf
+ */
+
+
+
+#include "app.h"
+#include "app_private.h"
+#include "Port.h"
+#include "Dio.h"
+#include "uart0.h"
+#include "GPTM.h"
+#include "adc.h"
+#include "heater.h"
+#include "lm35.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "event_groups.h"
+
+
+
+/*******************************************************************************
+ *                             Functions Definition                            *
+ *******************************************************************************/
+
+void APP_start(void)
+{
+    /* Start the scheduler */
+    vTaskStartScheduler();
+}
+
+
+
+void APP_init(void)
+{
+    /* --------------Initialize the peripherals-------------- */
+
+    /* Initialize Port */
+    Port_Init(&Port_Configuration);
+
+    /* Initialize Dio */
+    Dio_Init(&Dio_Configuration);
+
+    /* Initialize UART */
+    UART0_Init();
+
+    /* Initialize ADC */
+    ADC0_EnableCLock();
+
+
+
+    /* --------------Tasks Creation-------------- */
+
+    xTaskCreate(vButtonTask,
+                "Driving Wheel Button Task",
+                256,
+                (void *)&DrivingWheelButtonTaskParameter,
+                HIGH_PRIORITY,
+                &Driving_Wheel_Button_Task_Handler);
+
+
+    xTaskCreate(vButtonTask,
+                "Driver Seat Console Button Task",
+                256,
+                (void *)&DriverSeatConsoleButtonTaskParameter,
+                HIGH_PRIORITY,
+                &Driver_Button_Task_Handler);
+
+
+    xTaskCreate(vButtonTask,
+                "Passenger Seat Console Button Task",
+                256,
+                (void *)&PassengerSeatConsoleButtonTaskParameter,
+                HIGH_PRIORITY,
+                &Passanger_Button_Task_Handler);
+
+
+    xTaskCreate(vTempReadTask,
+                "Driver Seat Temp Read Task",
+                256,
+                (void *)&DriverSeatTempReadTaskParameter,
+                MEDIUM_PRIORITY,
+                &Driver_Seat_Temp_Read_Task_Handler);
+
+
+    xTaskCreate(vTempReadTask,
+                "Passenger Seat Temp Read Task",
+                256,
+                (void *)&PassengerSeatTempReadTaskParameter,
+                MEDIUM_PRIORITY,
+                &Passanger_Seat_Temp_Read_Task_Handler);
+
+
+    xTaskCreate(Task,
+                "Driver Seat Heater Task",
+                256,
+                NULL,
+                MEDIUM_PRIORITY,
+                &Driver_Seat_Heater_Task_Handler);
+
+
+    xTaskCreate(Task,
+                "Passanger Seat Heater Task",
+                256,
+                NULL,
+                MEDIUM_PRIORITY,
+                &Passanger_Seat_Heater_Task_Handler);
+
+
+    xTaskCreate(Task,
+                "Display Task",
+                256,
+                NULL,
+                LOW_PRIORITY,
+                &Display_Task_Handler);
+
+
+    xTaskCreate(vControlTask,
+                "Driver Seat Control Task",
+                256,
+                (void *)&DriverSeatControlTaskParameter,
+                MEDIUM_PRIORITY,
+                &Control_Task_Handler);
+
+
+    xTaskCreate(vControlTask,
+                "Passenger Seat Control Task",
+                256,
+                (void *)&PassangerSeatControlTaskParameter,
+                MEDIUM_PRIORITY,
+                &Control_Task_Handler);
+
+
+    xTaskCreate(Task,
+                "Failure Handling Task",
+                256,
+                NULL,
+                HIGH_PRIORITY,
+                &Failure_Task_Handler);
+
+
+    xTaskCreate(vRunTimeMeasurementsTask,
+                "Run time Measurements",
+                256,
+                NULL,
+                LOW_PRIORITY,
+                NULL);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void vRunTimeMeasurementsTask(void *pvParameters)
+{
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    static uint8 cRuntimeStatBuffer[ 512 ];
+    for (;;)
+    {
+        vTaskDelayUntil(&xLastWakeTime, RUNTIME_MEASUREMENTS_TASK_PERIODICITY);
+
+        vTaskGetRunTimeStats( cRuntimeStatBuffer );
+
+        taskENTER_CRITICAL();
+        UART0_SendString("\r\nTask\t\tAbs\t\t%%\r\n");
+        UART0_SendString( "-------------------------------------------\r\n" );
+        UART0_SendString( cRuntimeStatBuffer );
+        taskEXIT_CRITICAL();
+
+    }
+}
+

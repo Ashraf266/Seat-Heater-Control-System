@@ -37,7 +37,7 @@
 #define PORT_AR_RELEASE_PATCH_VERSION   (3U)
 
 /* Standard AUTOSAR types */
-#include "Std_Types.h"
+#include <std_types.h>
 
 /* AUTOSAR checking between Std Types and Port Modules */
 #if ((STD_TYPES_AR_RELEASE_MAJOR_VERSION != PORT_AR_RELEASE_MAJOR_VERSION)\
@@ -64,7 +64,7 @@
 #endif
 
 /* Non AUTOSAR files */
-#include "Common_Macros.h"
+#include <Common_Macros.h>
 
 /******************************************************************************
  *                      API Service Id Macros                                 *
