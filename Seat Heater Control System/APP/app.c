@@ -44,6 +44,21 @@ TaskHandle_t Control_Task_Handler;
 TaskHandle_t Failure_Task_Handler;
 
 
+/* Diagnostics */
+Diagnostics_type DiagnosticsArray[512];
+uint16 Diagnostics_index = 0;
+
+
+/* Global Variables for Heating States */
+uint8_t g_ucDriverSeatState = 0;
+uint8_t g_ucPassengerSeatState = 0;
+
+/* Parameters for Button Tasks */
+ButtonTaskParameterType DrivingWheelButtonTaskParameter = {DioConf_SW1_CHANNEL_NUM, &g_ucDriverSeatState};
+ButtonTaskParameterType DriverSeatConsoleButtonTaskParameter = {DioConf_SW1_CHANNEL_NUM, &g_ucDriverSeatState};
+ButtonTaskParameterType PassengerSeatConsoleButtonTaskParameter = {DioConf_SW2_CHANNEL_NUM, &g_ucPassengerSeatState};
+
+
 /*******************************************************************************
  *                             Functions Definition                            *
  *******************************************************************************/
@@ -79,7 +94,7 @@ void APP_init(void)
     xTaskCreate(Task,
                 "Driving Wheel Button Task",
                 256,
-                NULL,
+                (void *)&DrivingWheelButtonTaskParameter,
                 HIGH_PRIORITY,
                 &Driving_Wheel_Button_Task_Handler);
 
@@ -87,7 +102,7 @@ void APP_init(void)
     xTaskCreate(Task,
                 "Driver Seat Console Button Task",
                 256,
-                NULL,
+                (void *)&DriverSeatConsoleButtonTaskParameter,
                 HIGH_PRIORITY,
                 &Driver_Button_Task_Handler);
 
@@ -95,7 +110,7 @@ void APP_init(void)
     xTaskCreate(Task,
                 "Passenger Seat Console Button Task",
                 256,
-                NULL,
+                (void *)&PassengerSeatConsoleButtonTaskParameter,
                 HIGH_PRIORITY,
                 &Passanger_Button_Task_Handler);
 
@@ -189,7 +204,55 @@ void Task(void *pvParameters)
 
 
 
+void vButtonTask(void *pvParameters)
+{
+    ButtonTaskParameterType* Button = pvParameters;
+    int flag = 0;
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    uint8 ucButtonState;
+    for(;;)
+    {
+        vTaskDelayUntil( &xLastWakeTime, BUTTON_TASK_PERIODICITY );
+        ucButtonState = Dio_ReadChannel( Button->Channel);
 
+        /* If the button is pressed */
+        if(ucButtonState == STD_LOW)
+        {
+            /* For Debouncing */
+            vTaskDelay(pdMS_TO_TICKS(30));
+            ucButtonState = Dio_ReadChannel( Button->Channel);
+            if(ucButtonState == STD_LOW)
+            {
+                if( flag == 0 )
+                {
+                    /* Increase the state by 1 */
+                    *(Button->ButtonStateVarAddress) = (*(Button->ButtonStateVarAddress)+1) %4;
+
+                    /* Adding Diagnostics */
+                    taskENTER_CRITICAL();/* ----------- Critical Section ----------- */
+
+                    DiagnosticsArray[Diagnostics_index].Action = *(Button->ButtonStateVarAddress);
+                    DiagnosticsArray[Diagnostics_index].TimeStamp = GPTM_WTimer0Read();
+                    Diagnostics_index++;
+
+                    taskEXIT_CRITICAL(); /* ----------- Critical Section ----------- */
+
+                }
+                /* raise the flag so it doesn't change the state again */
+                flag = 1;
+            }
+
+        }
+        /* If the button is not pressed */
+        else
+        {
+            flag = 0;
+        }
+
+
+    }
+
+}
 
 
 

@@ -16,10 +16,12 @@
  *******************************************************************************/
 
 
-
-
-
-
+/* Diagnostics */
+#define FAILURE_OCCURED                     (0xFF)
+#define HEATING_IS_OFF                      (0x00)
+#define HEATING_LEVEL_CHANGED_TO_LOW        (0x01)
+#define HEATING_LEVEL_CHANGED_TO_MED        (0x01)
+#define HEATING_LEVEL_CHANGED_TO_HIGH       (0x01)
 
 
 
@@ -29,9 +31,22 @@
  *                               Types Declaration                             *
  *******************************************************************************/
 
+typedef struct
+{
+    uint32 TimeStamp;
+    uint8  Action;
+
+}Diagnostics_type;
 
 
 
+/* Button Task Parameter Type */
+typedef struct
+{
+    uint8 Channel;
+    uint8 *ButtonStateVarAddress;
+
+}ButtonTaskParameterType;
 
 /*******************************************************************************
  *                             Functions Prototypes                            *

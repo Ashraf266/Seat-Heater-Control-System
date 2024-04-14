@@ -1,33 +1,33 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Sun Apr 14 22:11:51 2024
+>> Linked Mon Apr 15 00:37:59 2024
 
 OUTPUT FILE NAME:   <Seat Heater Control System.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000058c9
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00005985
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00040000  00005ca8  0003a358  R  X
-  SRAM                  20000000   00008000  00004544  00003abc  RW X
+  FLASH                 00000000   00040000  00005d74  0003a28c  R  X
+  SRAM                  20000000   00008000  00005560  00002aa0  RW X
 
 
 SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00005ca8   00005ca8    r-x
+00000000    00000000    00005d78   00005d78    r-x
   00000000    00000000    0000026c   0000026c    r-- .intvecs
-  0000026c    0000026c    000057c0   000057c0    r-x .text
-  00005a2c    00005a2c    00000244   00000244    r-- .const
-  00005c70    00005c70    00000038   00000038    r-- .cinit
-20000000    20000000    00004548   00000000    rw-
-  20000000    20000000    000042e4   00000000    rw- .bss
-  200042e8    200042e8    00000200   00000000    rw- .stack
-  200044e8    200044e8    00000060   00000000    rw- .data
+  0000026c    0000026c    0000587c   0000587c    r-x .text
+  00005ae8    00005ae8    00000244   00000244    r-- .const
+  00005d30    00005d30    00000048   00000048    r-- .cinit
+20000000    20000000    00005564   00000000    rw-
+  20000000    20000000    000052e4   00000000    rw- .bss
+  200052e8    200052e8    00000200   00000000    rw- .stack
+  200054e8    200054e8    0000007c   00000000    rw- .data
 
 
 SECTION ALLOCATION MAP
@@ -38,123 +38,128 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    0000026c     
                   00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
 
-.text      0    0000026c    000057c0     
+.text      0    0000026c    0000587c     
                   0000026c    00002128     tasks.obj (.text)
                   00002394    00000a4e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:__TI_printfi)
                   00002de2    00000002                                   : div0.asm.obj (.text)
                   00002de4    000009a4     Port.obj (.text)
-                  00003788    00000330     app.obj (.text)
-                  00003ab8    000002e8     Dio.obj (.text)
-                  00003da0    000002b0     port.obj (.text)
-                  00004050    00000270     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_a)
-                  000042c0    000001d0                                   : _printfi.c.obj (.text:_pconv_g)
-                  00004490    000001c8     uart0.obj (.text)
-                  00004658    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
-                  0000480e    00000002     --HOLE-- [fill = 0]
-                  00004810    0000013c                                   : _printfi.c.obj (.text:_pconv_e)
-                  0000494c    00000136                                   : fd_div_t2.asm.obj (.text)
-                  00004a82    0000012a     list.obj (.text)
-                  00004bac    00000124     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:fcvt)
-                  00004cd0    00000110                                   : s_scalbn.c.obj (.text:scalbn)
-                  00004de0    000000fc                                   : fd_mul_t2.asm.obj (.text)
-                  00004edc    000000da     portasm.obj (.text)
-                  00004fb6    00000002     --HOLE-- [fill = 0]
-                  00004fb8    000000d0     heap_1.obj (.text)
-                  00005088    000000b1     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ltostr)
-                  00005139    00000001     --HOLE-- [fill = 0]
-                  0000513a    0000009c                                   : memcpy_t2.asm.obj (.text)
-                  000051d6    00000096                                   : ull_div_t2.asm.obj (.text)
-                  0000526c    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
-                  000052f2    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
-                  00005378    00000080     adc.obj (.text)
-                  000053f8    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.asm.obj (.text)
-                  00005472    0000006e                                   : _printfi.c.obj (.text:_mcpy)
-                  000054e0    0000006e                                   : ll_div_t2.asm.obj (.text)
-                  0000554e    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  000055b6    00000002     --HOLE-- [fill = 0]
-                  000055b8    00000064                                   : s_frexp.c.obj (.text:frexp)
-                  0000561c    00000056                                   : _printfi.c.obj (.text:_pconv_f)
+                  00003788    000003ec     app.obj (.text)
+                  00003b74    000002e8     Dio.obj (.text)
+                  00003e5c    000002b0     port.obj (.text)
+                  0000410c    00000270     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_a)
+                  0000437c    000001d0                                   : _printfi.c.obj (.text:_pconv_g)
+                  0000454c    000001c8     uart0.obj (.text)
+                  00004714    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
+                  000048ca    00000002     --HOLE-- [fill = 0]
+                  000048cc    0000013c                                   : _printfi.c.obj (.text:_pconv_e)
+                  00004a08    00000136                                   : fd_div_t2.asm.obj (.text)
+                  00004b3e    0000012a     list.obj (.text)
+                  00004c68    00000124     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:fcvt)
+                  00004d8c    00000110                                   : s_scalbn.c.obj (.text:scalbn)
+                  00004e9c    000000fc                                   : fd_mul_t2.asm.obj (.text)
+                  00004f98    000000da     portasm.obj (.text)
+                  00005072    00000002     --HOLE-- [fill = 0]
+                  00005074    000000d0     heap_1.obj (.text)
+                  00005144    000000b1     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ltostr)
+                  000051f5    00000001     --HOLE-- [fill = 0]
+                  000051f6    0000009c                                   : memcpy_t2.asm.obj (.text)
+                  00005292    00000096                                   : ull_div_t2.asm.obj (.text)
+                  00005328    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  000053ae    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  00005434    00000080     adc.obj (.text)
+                  000054b4    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.asm.obj (.text)
+                  0000552e    0000006e                                   : _printfi.c.obj (.text:_mcpy)
+                  0000559c    0000006e                                   : ll_div_t2.asm.obj (.text)
+                  0000560a    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
                   00005672    00000002     --HOLE-- [fill = 0]
-                  00005674    00000054     GPTM.obj (.text)
-                  000056c8    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : _ltoa.c.obj (.text:__TI_ltoa)
-                  0000571c    00000052                                   : _printfi.c.obj (.text:_ecpy)
-                  0000576e    00000002     --HOLE-- [fill = 0]
-                  00005770    0000004c                                   : atoi.c.obj (.text:atoi)
-                  000057bc    00000048                                   : fd_toi_t2.asm.obj (.text)
-                  00005804    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
-                  00005848    00000040                                   : sprintf.c.obj (.text:sprintf)
-                  00005888    0000003e                                   : _printfi.c.obj (.text:_fcpy)
-                  000058c6    00000002     --HOLE-- [fill = 0]
-                  000058c8    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
-                  000058fc    0000002e                                   : i_tofd_t2.asm.obj (.text)
-                  0000592a    0000001c                                   : memccpy.c.obj (.text:memccpy)
-                  00005946    0000001a                                   : s_copysign.c.obj (.text:copysign)
-                  00005960    00000018                                   : sprintf.c.obj (.text:_outs)
-                  00005978    00000016     Det.obj (.text)
-                  0000598e    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
-                  000059a4    00000014                                   : strcpy.c.obj (.text:strcpy)
-                  000059b8    00000014                                   : strlen.c.obj (.text:strlen)
-                  000059cc    00000012                                   : wcslen.c.obj (.text:wcslen)
-                  000059de    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  000059ec    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
-                  000059f8    0000000c     main.obj (.text)
-                  00005a04    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
-                  00005a10    0000000a     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outc)
-                  00005a1a    00000002     --HOLE-- [fill = 0]
-                  00005a1c    00000008                                   : errno.c.obj (.text:__aeabi_errno_addr)
-                  00005a24    00000004                                   : pre_init.c.obj (.text:_system_pre_init)
-                  00005a28    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00005674    00000064                                   : s_frexp.c.obj (.text:frexp)
+                  000056d8    00000056                                   : _printfi.c.obj (.text:_pconv_f)
+                  0000572e    00000002     --HOLE-- [fill = 0]
+                  00005730    00000054     GPTM.obj (.text)
+                  00005784    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : _ltoa.c.obj (.text:__TI_ltoa)
+                  000057d8    00000052                                   : _printfi.c.obj (.text:_ecpy)
+                  0000582a    00000002     --HOLE-- [fill = 0]
+                  0000582c    0000004c                                   : atoi.c.obj (.text:atoi)
+                  00005878    00000048                                   : fd_toi_t2.asm.obj (.text)
+                  000058c0    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00005904    00000040                                   : sprintf.c.obj (.text:sprintf)
+                  00005944    0000003e                                   : _printfi.c.obj (.text:_fcpy)
+                  00005982    00000002     --HOLE-- [fill = 0]
+                  00005984    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  000059b8    0000002e                                   : i_tofd_t2.asm.obj (.text)
+                  000059e6    0000001c                                   : memccpy.c.obj (.text:memccpy)
+                  00005a02    0000001a                                   : s_copysign.c.obj (.text:copysign)
+                  00005a1c    00000018                                   : sprintf.c.obj (.text:_outs)
+                  00005a34    00000016     Det.obj (.text)
+                  00005a4a    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
+                  00005a60    00000014                                   : strcpy.c.obj (.text:strcpy)
+                  00005a74    00000014                                   : strlen.c.obj (.text:strlen)
+                  00005a88    00000012                                   : wcslen.c.obj (.text:wcslen)
+                  00005a9a    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00005aa8    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00005ab4    0000000c     main.obj (.text)
+                  00005ac0    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00005acc    0000000a     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outc)
+                  00005ad6    00000002     --HOLE-- [fill = 0]
+                  00005ad8    00000008                                   : errno.c.obj (.text:__aeabi_errno_addr)
+                  00005ae0    00000004                                   : pre_init.c.obj (.text:_system_pre_init)
+                  00005ae4    00000004                                   : exit.c.obj (.text:abort:abort)
 
-.const     0    00005a2c    00000244     
-                  00005a2c    0000012d     Port_PBcfg.obj (.const:Port_Configuration)
-                  00005b59    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
-                  00005c5a    0000000a     Dio_PBcfg.obj (.const:Dio_Configuration)
-                  00005c64    00000008     port.obj (.const)
-                  00005c6c    00000004     tasks.obj (.const)
+.const     0    00005ae8    00000244     
+                  00005ae8    0000012d     Port_PBcfg.obj (.const:Port_Configuration)
+                  00005c15    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  00005d16    0000000a     Dio_PBcfg.obj (.const:Dio_Configuration)
+                  00005d20    00000008     port.obj (.const)
+                  00005d28    00000004     tasks.obj (.const)
 
-.cinit     0    00005c70    00000038     
-                  00005c70    00000013     (.cinit..data.load) [load image, compression = lzss]
-                  00005c83    00000001     --HOLE-- [fill = 0]
-                  00005c84    0000000c     (__TI_handler_table)
-                  00005c90    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  00005c98    00000010     (__TI_cinit_table)
+.cinit     0    00005d30    00000048     
+                  00005d30    00000024     (.cinit..data.load) [load image, compression = lzss]
+                  00005d54    0000000c     (__TI_handler_table)
+                  00005d60    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00005d68    00000010     (__TI_cinit_table)
 
 .init_array 
 *          0    00000000    00000000     UNINITIALIZED
 
-.bss       0    20000000    000042e4     UNINITIALIZED
+.bss       0    20000000    000052e4     UNINITIALIZED
                   20000000    00004000     heap_1.obj (.bss:ucHeap)
-                  20004000    00000200     app.obj (.bss:cRuntimeStatBuffer$1)
-                  20004200    00000064     tasks.obj (.bss:pxReadyTasksLists)
-                  20004264    00000014     tasks.obj (.bss:xDelayedTaskList1)
-                  20004278    00000014     tasks.obj (.bss:xDelayedTaskList2)
-                  2000428c    00000014     tasks.obj (.bss:xPendingReadyList)
-                  200042a0    00000014     tasks.obj (.bss:xSuspendedTaskList)
-                  200042b4    00000008     tasks.obj (.bss)
-                  200042bc    00000004     (.common:Control_Task_Handler)
-                  200042c0    00000004     (.common:Display_Task_Handler)
-                  200042c4    00000004     (.common:Driver_Button_Task_Handler)
-                  200042c8    00000004     (.common:Driver_Seat_Heater_Task_Handler)
-                  200042cc    00000004     (.common:Driver_Seat_Temp_Read_Task_Handler)
-                  200042d0    00000004     (.common:Driving_Wheel_Button_Task_Handler)
-                  200042d4    00000004     (.common:Failure_Task_Handler)
-                  200042d8    00000004     (.common:Passanger_Button_Task_Handler)
-                  200042dc    00000004     (.common:Passanger_Seat_Heater_Task_Handler)
-                  200042e0    00000004     (.common:Passanger_Seat_Temp_Read_Task_Handler)
+                  20004000    00001000     (.common:DiagnosticsArray)
+                  20005000    00000200     app.obj (.bss:cRuntimeStatBuffer$1)
+                  20005200    00000064     tasks.obj (.bss:pxReadyTasksLists)
+                  20005264    00000014     tasks.obj (.bss:xDelayedTaskList1)
+                  20005278    00000014     tasks.obj (.bss:xDelayedTaskList2)
+                  2000528c    00000014     tasks.obj (.bss:xPendingReadyList)
+                  200052a0    00000014     tasks.obj (.bss:xSuspendedTaskList)
+                  200052b4    00000008     tasks.obj (.bss)
+                  200052bc    00000004     (.common:Control_Task_Handler)
+                  200052c0    00000004     (.common:Display_Task_Handler)
+                  200052c4    00000004     (.common:Driver_Button_Task_Handler)
+                  200052c8    00000004     (.common:Driver_Seat_Heater_Task_Handler)
+                  200052cc    00000004     (.common:Driver_Seat_Temp_Read_Task_Handler)
+                  200052d0    00000004     (.common:Driving_Wheel_Button_Task_Handler)
+                  200052d4    00000004     (.common:Failure_Task_Handler)
+                  200052d8    00000004     (.common:Passanger_Button_Task_Handler)
+                  200052dc    00000004     (.common:Passanger_Seat_Heater_Task_Handler)
+                  200052e0    00000004     (.common:Passanger_Seat_Temp_Read_Task_Handler)
 
-.data      0    200044e8    00000060     UNINITIALIZED
-                  200044e8    00000038     tasks.obj (.data)
-                  20004520    0000000c     port.obj (.data)
-                  2000452c    00000008     heap_1.obj (.data)
-                  20004534    00000005     Port.obj (.data)
-                  20004539    00000003     --HOLE--
-                  2000453c    00000005     Dio.obj (.data)
-                  20004541    00000003     --HOLE--
-                  20004544    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
+.data      0    200054e8    0000007c     UNINITIALIZED
+                  200054e8    00000038     tasks.obj (.data)
+                  20005520    0000000c     port.obj (.data)
+                  2000552c    00000008     app.obj (.data:DriverSeatConsoleButtonTaskParameter)
+                  20005534    00000008     app.obj (.data:DrivingWheelButtonTaskParameter)
+                  2000553c    00000008     app.obj (.data:PassengerSeatConsoleButtonTaskParameter)
+                  20005544    00000008     heap_1.obj (.data)
+                  2000554c    00000005     Port.obj (.data)
+                  20005551    00000003     --HOLE--
+                  20005554    00000005     Dio.obj (.data)
+                  20005559    00000001     --HOLE--
+                  2000555a    00000004     app.obj (.data)
+                  2000555e    00000002     --HOLE--
+                  20005560    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
 
-.stack     0    200042e8    00000200     UNINITIALIZED
-                  200042e8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
-                  200042ec    000001fc     --HOLE--
+.stack     0    200052e8    00000200     UNINITIALIZED
+                  200052e8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  200052ec    000001fc     --HOLE--
 
 __llvm_prf_cnts 
 *          0    20000000    00000000     UNINITIALIZED
@@ -170,9 +175,9 @@ MODULE SUMMARY
        Total:                         24      620       0      
                                                                
     .\APP\
-       app.obj                        816     0         552    
+       app.obj                        1004    0         4676   
     +--+------------------------------+-------+---------+---------+
-       Total:                         816     0         552    
+       Total:                         1004    0         4676   
                                                                
     .\FreeRTOS\Source\
        tasks.obj                      8488    4         244    
@@ -256,21 +261,21 @@ MODULE SUMMARY
        Total:                         7807    257       4      
                                                                
        Stack:                         0       0         512    
-       Linker Generated:              0       55        0      
+       Linker Generated:              0       72        0      
     +--+------------------------------+-------+---------+---------+
-       Grand Total:                   22449   1255      17726  
+       Grand Total:                   22637   1272      21850  
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00005c98 records: 2, size/record: 8, table size: 16
-	.data: load addr=00005c70, load size=00000013 bytes, run addr=200044e8, run size=00000060 bytes, compression=lzss
-	.bss: load addr=00005c90, load size=00000008 bytes, run addr=20000000, run size=000042e4 bytes, compression=zero_init
+__TI_cinit_table @ 00005d68 records: 2, size/record: 8, table size: 16
+	.data: load addr=00005d30, load size=00000024 bytes, run addr=200054e8, run size=0000007c bytes, compression=lzss
+	.bss: load addr=00005d60, load size=00000008 bytes, run addr=20000000, run size=000052e4 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00005c84 records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 00005d54 records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 	index: 2, handler: __TI_zero_init
@@ -278,363 +283,379 @@ __TI_handler_table @ 00005c84 records: 3, size/record: 4, table size: 12
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
-address   name                                 
--------   ----                                 
-00005379  ADC0_EnableCLock                     
-00005385  ADC0_ReadChannel                     
-00003791  APP_init                             
-00003789  APP_start                            
-00005a29  C$$EXIT                              
-200042bc  Control_Task_Handler                 
-00005979  Det_ReportError                      
-00005c5a  Dio_Configuration                    
-00003c85  Dio_FlipChannel                      
-00003ab9  Dio_Init                             
-00003bbd  Dio_ReadChannel                      
-00003add  Dio_WriteChannel                     
-200042c0  Display_Task_Handler                 
-200042c4  Driver_Button_Task_Handler           
-200042c8  Driver_Seat_Heater_Task_Handler      
-200042cc  Driver_Seat_Temp_Read_Task_Handler   
-200042d0  Driving_Wheel_Button_Task_Handler    
-200042d4  Failure_Task_Handler                 
-00005675  GPTM_WTimer0Init                     
-000056a5  GPTM_WTimer0Read                     
-200042d8  Passanger_Button_Task_Handler        
-200042dc  Passanger_Seat_Heater_Task_Handler   
-200042e0  Passanger_Seat_Temp_Read_Task_Handler
-00005a2c  Port_Configuration                   
-00003413  Port_GetVersionInfo                  
-00002de5  Port_Init                            
-000032c9  Port_RefreshPortDirection            
-00003175  Port_SetPinDirection                 
-00003499  Port_SetPinMode                      
-00005a05  ResetISR                             
-000038b1  Task                                 
-000044e7  UART0_Init                           
-00004543  UART0_ReceiveByte                    
-00004527  UART0_SendByte                       
-00004579  UART0_SendInteger                    
-00004553  UART0_SendString                     
-200044e8  __STACK_END                          
-00000200  __STACK_SIZE                         
-200044e8  __STACK_TOP                          
-00005c98  __TI_CINIT_Base                      
-00005ca8  __TI_CINIT_Limit                     
-00005c84  __TI_Handler_Table_Base              
-00005c90  __TI_Handler_Table_Limit             
-00005805  __TI_auto_init_nobinit_nopinit       
-0000554f  __TI_decompress_lzss                 
-000059df  __TI_decompress_none                 
-000056c9  __TI_ltoa                            
-ffffffff  __TI_pprof_out_hndl                  
-00002395  __TI_printfi                         
-ffffffff  __TI_prof_data_size                  
-ffffffff  __TI_prof_data_start                 
-00000000  __TI_static_base__                   
-000059ed  __TI_zero_init                       
-0000526d  __aeabi_cdcmpeq                      
-0000526d  __aeabi_cdcmple                      
-000052f3  __aeabi_cdrcmple                     
-000057bd  __aeabi_d2iz                         
-00004663  __aeabi_dadd                         
-0000494d  __aeabi_ddiv                         
-00004de1  __aeabi_dmul                         
-00004659  __aeabi_dsub                         
-00005a1d  __aeabi_errno_addr                   
-000058fd  __aeabi_i2d                          
-00002de3  __aeabi_idiv0                        
-00002de3  __aeabi_ldiv0                        
-000054e1  __aeabi_ldivmod                      
-000053f9  __aeabi_memclr                       
-000053f9  __aeabi_memclr4                      
-000053f9  __aeabi_memclr8                      
-0000513b  __aeabi_memcpy                       
-0000513b  __aeabi_memcpy4                      
-0000513b  __aeabi_memcpy8                      
-000053fb  __aeabi_memset                       
-000053fb  __aeabi_memset4                      
-000053fb  __aeabi_memset8                      
-000051d7  __aeabi_uldivmod                     
-ffffffff  __binit__                            
-ffffffff  __c_args__                           
-UNDEFED   __mpu_init                           
-200042e8  __stack                              
-20000000  __start___llvm_prf_cnts              
-20000000  __stop___llvm_prf_cnts               
-000058c9  _c_int00_noargs                      
-00005b59  _ctypes_                             
-UNDEFED   _system_post_cinit                   
-00005a25  _system_pre_init                     
-00005a29  abort                                
-00005771  atoi                                 
-ffffffff  binit                                
-00005947  copysign                             
-00005947  copysignl                            
-00000605  eTaskGetState                        
-20004544  errno                                
-000055b9  frexp                                
-000055b9  frexpl                               
-00000000  g_pfnVectors                         
-00004cd1  ldexp                                
-00004cd1  ldexpl                               
-000059f9  main                                 
-0000592b  memccpy                              
-0000513b  memcpy                               
-00005401  memset                               
-00000c97  pcTaskGetName                        
-00004fb9  pvPortMalloc                         
-200044e8  pxCurrentTCB                         
-00003da1  pxPortInitialiseStack                
-00004cd1  scalbn                               
-00004cd1  scalbnl                              
-00005849  sprintf                              
-0000598f  strchr                               
-000059a5  strcpy                               
-000059b9  strlen                               
-00005c64  ulMaxSyscallInterruptPriority        
-00004eed  ulPortGetIPSR                        
-00001a41  ulTaskGenericNotifyTake              
-00002259  ulTaskGenericNotifyValueClear        
-00004b65  uxListRemove                         
-00000c91  uxTaskGetNumberOfTasks               
-00000ced  uxTaskGetSystemState                 
-00001549  uxTaskGetTaskNumber                  
-00001a17  uxTaskResetEventItemValue            
-00005c6c  uxTopUsedPriority                    
-00004a83  vListInitialise                      
-00004ab3  vListInitialiseItem                  
-00004aff  vListInsert                          
-00004ac3  vListInsertEnd                       
-00004fa9  vPortEnableVFP                       
-00003ee5  vPortEndScheduler                    
-00003f09  vPortEnterCritical                   
-00003f4b  vPortExitCritical                    
-00005045  vPortFree                            
-00005069  vPortInitialiseBlocks                
-00004f65  vPortSVCHandler                      
-00003f9d  vPortSetupTimerInterrupt             
-00004f85  vPortStartFirstTask                  
-00003fb9  vPortValidateInterruptPriority       
-000038b9  vRunTimeMeasurementsTask             
-000005a9  vTaskDelay                           
-00000a97  vTaskEndScheduler                    
-00002041  vTaskGenericNotifyGiveFromISR        
-00001609  vTaskGetInfo                         
-0000193f  vTaskGetRunTimeStats                 
-0000146d  vTaskInternalSetTimeOutState         
-0000182d  vTaskList                            
-0000153d  vTaskMissedYield                     
-000010b1  vTaskPlaceOnEventList                
-000010e9  vTaskPlaceOnUnorderedEventList       
-000012fd  vTaskRemoveFromUnorderedEventList    
-0000084d  vTaskResume                          
-00001571  vTaskSetTaskNumber                   
-0000143b  vTaskSetTimeOutState                 
-00000a29  vTaskStartScheduler                  
-000006d9  vTaskSuspend                         
-00000ab3  vTaskSuspendAll                      
-00000ff5  vTaskSwitchContext                   
-000059cd  wcslen                               
-00005071  xPortGetFreeHeapSize                 
-00004f05  xPortPendSVHandler                   
-00003e2d  xPortStartScheduler                  
-00003f77  xPortSysTickHandler                  
-00000db1  xTaskCatchUpTicks                    
-00001491  xTaskCheckForTimeOut                 
-0000026d  xTaskCreate                          
-000004cf  xTaskDelayUntil                      
-00001c05  xTaskGenericNotify                   
-00001deb  xTaskGenericNotifyFromISR            
-000021f1  xTaskGenericNotifyStateClear         
-00001b09  xTaskGenericNotifyWait               
-000017bd  xTaskGetCurrentTaskHandle            
-00000c69  xTaskGetTickCount                    
-00000c79  xTaskGetTickCountFromISR             
-00000e0d  xTaskIncrementTick                   
-00001199  xTaskRemoveFromEventList             
-00000ac5  xTaskResumeAll                       
-00000921  xTaskResumeFromISR                   
+address   name                                   
+-------   ----                                   
+00005435  ADC0_EnableCLock                       
+00005441  ADC0_ReadChannel                       
+00003791  APP_init                               
+00003789  APP_start                              
+00005ae5  C$$EXIT                                
+200052bc  Control_Task_Handler                   
+00005a35  Det_ReportError                        
+20004000  DiagnosticsArray                       
+2000555a  Diagnostics_index                      
+00005d16  Dio_Configuration                      
+00003d41  Dio_FlipChannel                        
+00003b75  Dio_Init                               
+00003c79  Dio_ReadChannel                        
+00003b99  Dio_WriteChannel                       
+200052c0  Display_Task_Handler                   
+2000552c  DriverSeatConsoleButtonTaskParameter   
+200052c4  Driver_Button_Task_Handler             
+200052c8  Driver_Seat_Heater_Task_Handler        
+200052cc  Driver_Seat_Temp_Read_Task_Handler     
+20005534  DrivingWheelButtonTaskParameter        
+200052d0  Driving_Wheel_Button_Task_Handler      
+200052d4  Failure_Task_Handler                   
+00005731  GPTM_WTimer0Init                       
+00005761  GPTM_WTimer0Read                       
+200052d8  Passanger_Button_Task_Handler          
+200052dc  Passanger_Seat_Heater_Task_Handler     
+200052e0  Passanger_Seat_Temp_Read_Task_Handler  
+2000553c  PassengerSeatConsoleButtonTaskParameter
+00005ae8  Port_Configuration                     
+00003413  Port_GetVersionInfo                    
+00002de5  Port_Init                              
+000032c9  Port_RefreshPortDirection              
+00003175  Port_SetPinDirection                   
+00003499  Port_SetPinMode                        
+00005ac1  ResetISR                               
+000038b1  Task                                   
+000045a3  UART0_Init                             
+000045ff  UART0_ReceiveByte                      
+000045e3  UART0_SendByte                         
+00004635  UART0_SendInteger                      
+0000460f  UART0_SendString                       
+200054e8  __STACK_END                            
+00000200  __STACK_SIZE                           
+200054e8  __STACK_TOP                            
+00005d68  __TI_CINIT_Base                        
+00005d78  __TI_CINIT_Limit                       
+00005d54  __TI_Handler_Table_Base                
+00005d60  __TI_Handler_Table_Limit               
+000058c1  __TI_auto_init_nobinit_nopinit         
+0000560b  __TI_decompress_lzss                   
+00005a9b  __TI_decompress_none                   
+00005785  __TI_ltoa                              
+ffffffff  __TI_pprof_out_hndl                    
+00002395  __TI_printfi                           
+ffffffff  __TI_prof_data_size                    
+ffffffff  __TI_prof_data_start                   
+00000000  __TI_static_base__                     
+00005aa9  __TI_zero_init                         
+00005329  __aeabi_cdcmpeq                        
+00005329  __aeabi_cdcmple                        
+000053af  __aeabi_cdrcmple                       
+00005879  __aeabi_d2iz                           
+0000471f  __aeabi_dadd                           
+00004a09  __aeabi_ddiv                           
+00004e9d  __aeabi_dmul                           
+00004715  __aeabi_dsub                           
+00005ad9  __aeabi_errno_addr                     
+000059b9  __aeabi_i2d                            
+00002de3  __aeabi_idiv0                          
+00002de3  __aeabi_ldiv0                          
+0000559d  __aeabi_ldivmod                        
+000054b5  __aeabi_memclr                         
+000054b5  __aeabi_memclr4                        
+000054b5  __aeabi_memclr8                        
+000051f7  __aeabi_memcpy                         
+000051f7  __aeabi_memcpy4                        
+000051f7  __aeabi_memcpy8                        
+000054b7  __aeabi_memset                         
+000054b7  __aeabi_memset4                        
+000054b7  __aeabi_memset8                        
+00005293  __aeabi_uldivmod                       
+ffffffff  __binit__                              
+ffffffff  __c_args__                             
+UNDEFED   __mpu_init                             
+200052e8  __stack                                
+20000000  __start___llvm_prf_cnts                
+20000000  __stop___llvm_prf_cnts                 
+00005985  _c_int00_noargs                        
+00005c15  _ctypes_                               
+UNDEFED   _system_post_cinit                     
+00005ae1  _system_pre_init                       
+00005ae5  abort                                  
+0000582d  atoi                                   
+ffffffff  binit                                  
+00005a03  copysign                               
+00005a03  copysignl                              
+00000605  eTaskGetState                          
+20005560  errno                                  
+00005675  frexp                                  
+00005675  frexpl                                 
+00000000  g_pfnVectors                           
+2000555c  g_ucDriverSeatState                    
+2000555d  g_ucPassengerSeatState                 
+00004d8d  ldexp                                  
+00004d8d  ldexpl                                 
+00005ab5  main                                   
+000059e7  memccpy                                
+000051f7  memcpy                                 
+000054bd  memset                                 
+00000c97  pcTaskGetName                          
+00005075  pvPortMalloc                           
+200054e8  pxCurrentTCB                           
+00003e5d  pxPortInitialiseStack                  
+00004d8d  scalbn                                 
+00004d8d  scalbnl                                
+00005905  sprintf                                
+00005a4b  strchr                                 
+00005a61  strcpy                                 
+00005a75  strlen                                 
+00005d20  ulMaxSyscallInterruptPriority          
+00004fa9  ulPortGetIPSR                          
+00001a41  ulTaskGenericNotifyTake                
+00002259  ulTaskGenericNotifyValueClear          
+00004c21  uxListRemove                           
+00000c91  uxTaskGetNumberOfTasks                 
+00000ced  uxTaskGetSystemState                   
+00001549  uxTaskGetTaskNumber                    
+00001a17  uxTaskResetEventItemValue              
+00005d28  uxTopUsedPriority                      
+000038b9  vButtonTask                            
+00004b3f  vListInitialise                        
+00004b6f  vListInitialiseItem                    
+00004bbb  vListInsert                            
+00004b7f  vListInsertEnd                         
+00005065  vPortEnableVFP                         
+00003fa1  vPortEndScheduler                      
+00003fc5  vPortEnterCritical                     
+00004007  vPortExitCritical                      
+00005101  vPortFree                              
+00005125  vPortInitialiseBlocks                  
+00005021  vPortSVCHandler                        
+00004059  vPortSetupTimerInterrupt               
+00005041  vPortStartFirstTask                    
+00004075  vPortValidateInterruptPriority         
+00003985  vRunTimeMeasurementsTask               
+000005a9  vTaskDelay                             
+00000a97  vTaskEndScheduler                      
+00002041  vTaskGenericNotifyGiveFromISR          
+00001609  vTaskGetInfo                           
+0000193f  vTaskGetRunTimeStats                   
+0000146d  vTaskInternalSetTimeOutState           
+0000182d  vTaskList                              
+0000153d  vTaskMissedYield                       
+000010b1  vTaskPlaceOnEventList                  
+000010e9  vTaskPlaceOnUnorderedEventList         
+000012fd  vTaskRemoveFromUnorderedEventList      
+0000084d  vTaskResume                            
+00001571  vTaskSetTaskNumber                     
+0000143b  vTaskSetTimeOutState                   
+00000a29  vTaskStartScheduler                    
+000006d9  vTaskSuspend                           
+00000ab3  vTaskSuspendAll                        
+00000ff5  vTaskSwitchContext                     
+00005a89  wcslen                                 
+0000512d  xPortGetFreeHeapSize                   
+00004fc1  xPortPendSVHandler                     
+00003ee9  xPortStartScheduler                    
+00004033  xPortSysTickHandler                    
+00000db1  xTaskCatchUpTicks                      
+00001491  xTaskCheckForTimeOut                   
+0000026d  xTaskCreate                            
+000004cf  xTaskDelayUntil                        
+00001c05  xTaskGenericNotify                     
+00001deb  xTaskGenericNotifyFromISR              
+000021f1  xTaskGenericNotifyStateClear           
+00001b09  xTaskGenericNotifyWait                 
+000017bd  xTaskGetCurrentTaskHandle              
+00000c69  xTaskGetTickCount                      
+00000c79  xTaskGetTickCountFromISR               
+00000e0d  xTaskIncrementTick                     
+00001199  xTaskRemoveFromEventList               
+00000ac5  xTaskResumeAll                         
+00000921  xTaskResumeFromISR                     
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
 
-address   name                                 
--------   ----                                 
-00000000  __TI_static_base__                   
-00000000  g_pfnVectors                         
-00000200  __STACK_SIZE                         
-0000026d  xTaskCreate                          
-000004cf  xTaskDelayUntil                      
-000005a9  vTaskDelay                           
-00000605  eTaskGetState                        
-000006d9  vTaskSuspend                         
-0000084d  vTaskResume                          
-00000921  xTaskResumeFromISR                   
-00000a29  vTaskStartScheduler                  
-00000a97  vTaskEndScheduler                    
-00000ab3  vTaskSuspendAll                      
-00000ac5  xTaskResumeAll                       
-00000c69  xTaskGetTickCount                    
-00000c79  xTaskGetTickCountFromISR             
-00000c91  uxTaskGetNumberOfTasks               
-00000c97  pcTaskGetName                        
-00000ced  uxTaskGetSystemState                 
-00000db1  xTaskCatchUpTicks                    
-00000e0d  xTaskIncrementTick                   
-00000ff5  vTaskSwitchContext                   
-000010b1  vTaskPlaceOnEventList                
-000010e9  vTaskPlaceOnUnorderedEventList       
-00001199  xTaskRemoveFromEventList             
-000012fd  vTaskRemoveFromUnorderedEventList    
-0000143b  vTaskSetTimeOutState                 
-0000146d  vTaskInternalSetTimeOutState         
-00001491  xTaskCheckForTimeOut                 
-0000153d  vTaskMissedYield                     
-00001549  uxTaskGetTaskNumber                  
-00001571  vTaskSetTaskNumber                   
-00001609  vTaskGetInfo                         
-000017bd  xTaskGetCurrentTaskHandle            
-0000182d  vTaskList                            
-0000193f  vTaskGetRunTimeStats                 
-00001a17  uxTaskResetEventItemValue            
-00001a41  ulTaskGenericNotifyTake              
-00001b09  xTaskGenericNotifyWait               
-00001c05  xTaskGenericNotify                   
-00001deb  xTaskGenericNotifyFromISR            
-00002041  vTaskGenericNotifyGiveFromISR        
-000021f1  xTaskGenericNotifyStateClear         
-00002259  ulTaskGenericNotifyValueClear        
-00002395  __TI_printfi                         
-00002de3  __aeabi_idiv0                        
-00002de3  __aeabi_ldiv0                        
-00002de5  Port_Init                            
-00003175  Port_SetPinDirection                 
-000032c9  Port_RefreshPortDirection            
-00003413  Port_GetVersionInfo                  
-00003499  Port_SetPinMode                      
-00003789  APP_start                            
-00003791  APP_init                             
-000038b1  Task                                 
-000038b9  vRunTimeMeasurementsTask             
-00003ab9  Dio_Init                             
-00003add  Dio_WriteChannel                     
-00003bbd  Dio_ReadChannel                      
-00003c85  Dio_FlipChannel                      
-00003da1  pxPortInitialiseStack                
-00003e2d  xPortStartScheduler                  
-00003ee5  vPortEndScheduler                    
-00003f09  vPortEnterCritical                   
-00003f4b  vPortExitCritical                    
-00003f77  xPortSysTickHandler                  
-00003f9d  vPortSetupTimerInterrupt             
-00003fb9  vPortValidateInterruptPriority       
-000044e7  UART0_Init                           
-00004527  UART0_SendByte                       
-00004543  UART0_ReceiveByte                    
-00004553  UART0_SendString                     
-00004579  UART0_SendInteger                    
-00004659  __aeabi_dsub                         
-00004663  __aeabi_dadd                         
-0000494d  __aeabi_ddiv                         
-00004a83  vListInitialise                      
-00004ab3  vListInitialiseItem                  
-00004ac3  vListInsertEnd                       
-00004aff  vListInsert                          
-00004b65  uxListRemove                         
-00004cd1  ldexp                                
-00004cd1  ldexpl                               
-00004cd1  scalbn                               
-00004cd1  scalbnl                              
-00004de1  __aeabi_dmul                         
-00004eed  ulPortGetIPSR                        
-00004f05  xPortPendSVHandler                   
-00004f65  vPortSVCHandler                      
-00004f85  vPortStartFirstTask                  
-00004fa9  vPortEnableVFP                       
-00004fb9  pvPortMalloc                         
-00005045  vPortFree                            
-00005069  vPortInitialiseBlocks                
-00005071  xPortGetFreeHeapSize                 
-0000513b  __aeabi_memcpy                       
-0000513b  __aeabi_memcpy4                      
-0000513b  __aeabi_memcpy8                      
-0000513b  memcpy                               
-000051d7  __aeabi_uldivmod                     
-0000526d  __aeabi_cdcmpeq                      
-0000526d  __aeabi_cdcmple                      
-000052f3  __aeabi_cdrcmple                     
-00005379  ADC0_EnableCLock                     
-00005385  ADC0_ReadChannel                     
-000053f9  __aeabi_memclr                       
-000053f9  __aeabi_memclr4                      
-000053f9  __aeabi_memclr8                      
-000053fb  __aeabi_memset                       
-000053fb  __aeabi_memset4                      
-000053fb  __aeabi_memset8                      
-00005401  memset                               
-000054e1  __aeabi_ldivmod                      
-0000554f  __TI_decompress_lzss                 
-000055b9  frexp                                
-000055b9  frexpl                               
-00005675  GPTM_WTimer0Init                     
-000056a5  GPTM_WTimer0Read                     
-000056c9  __TI_ltoa                            
-00005771  atoi                                 
-000057bd  __aeabi_d2iz                         
-00005805  __TI_auto_init_nobinit_nopinit       
-00005849  sprintf                              
-000058c9  _c_int00_noargs                      
-000058fd  __aeabi_i2d                          
-0000592b  memccpy                              
-00005947  copysign                             
-00005947  copysignl                            
-00005979  Det_ReportError                      
-0000598f  strchr                               
-000059a5  strcpy                               
-000059b9  strlen                               
-000059cd  wcslen                               
-000059df  __TI_decompress_none                 
-000059ed  __TI_zero_init                       
-000059f9  main                                 
-00005a05  ResetISR                             
-00005a1d  __aeabi_errno_addr                   
-00005a25  _system_pre_init                     
-00005a29  C$$EXIT                              
-00005a29  abort                                
-00005a2c  Port_Configuration                   
-00005b59  _ctypes_                             
-00005c5a  Dio_Configuration                    
-00005c64  ulMaxSyscallInterruptPriority        
-00005c6c  uxTopUsedPriority                    
-00005c84  __TI_Handler_Table_Base              
-00005c90  __TI_Handler_Table_Limit             
-00005c98  __TI_CINIT_Base                      
-00005ca8  __TI_CINIT_Limit                     
-20000000  __start___llvm_prf_cnts              
-20000000  __stop___llvm_prf_cnts               
-200042bc  Control_Task_Handler                 
-200042c0  Display_Task_Handler                 
-200042c4  Driver_Button_Task_Handler           
-200042c8  Driver_Seat_Heater_Task_Handler      
-200042cc  Driver_Seat_Temp_Read_Task_Handler   
-200042d0  Driving_Wheel_Button_Task_Handler    
-200042d4  Failure_Task_Handler                 
-200042d8  Passanger_Button_Task_Handler        
-200042dc  Passanger_Seat_Heater_Task_Handler   
-200042e0  Passanger_Seat_Temp_Read_Task_Handler
-200042e8  __stack                              
-200044e8  __STACK_END                          
-200044e8  __STACK_TOP                          
-200044e8  pxCurrentTCB                         
-20004544  errno                                
-ffffffff  __TI_pprof_out_hndl                  
-ffffffff  __TI_prof_data_size                  
-ffffffff  __TI_prof_data_start                 
-ffffffff  __binit__                            
-ffffffff  __c_args__                           
-ffffffff  binit                                
-UNDEFED   __mpu_init                           
-UNDEFED   _system_post_cinit                   
+address   name                                   
+-------   ----                                   
+00000000  __TI_static_base__                     
+00000000  g_pfnVectors                           
+00000200  __STACK_SIZE                           
+0000026d  xTaskCreate                            
+000004cf  xTaskDelayUntil                        
+000005a9  vTaskDelay                             
+00000605  eTaskGetState                          
+000006d9  vTaskSuspend                           
+0000084d  vTaskResume                            
+00000921  xTaskResumeFromISR                     
+00000a29  vTaskStartScheduler                    
+00000a97  vTaskEndScheduler                      
+00000ab3  vTaskSuspendAll                        
+00000ac5  xTaskResumeAll                         
+00000c69  xTaskGetTickCount                      
+00000c79  xTaskGetTickCountFromISR               
+00000c91  uxTaskGetNumberOfTasks                 
+00000c97  pcTaskGetName                          
+00000ced  uxTaskGetSystemState                   
+00000db1  xTaskCatchUpTicks                      
+00000e0d  xTaskIncrementTick                     
+00000ff5  vTaskSwitchContext                     
+000010b1  vTaskPlaceOnEventList                  
+000010e9  vTaskPlaceOnUnorderedEventList         
+00001199  xTaskRemoveFromEventList               
+000012fd  vTaskRemoveFromUnorderedEventList      
+0000143b  vTaskSetTimeOutState                   
+0000146d  vTaskInternalSetTimeOutState           
+00001491  xTaskCheckForTimeOut                   
+0000153d  vTaskMissedYield                       
+00001549  uxTaskGetTaskNumber                    
+00001571  vTaskSetTaskNumber                     
+00001609  vTaskGetInfo                           
+000017bd  xTaskGetCurrentTaskHandle              
+0000182d  vTaskList                              
+0000193f  vTaskGetRunTimeStats                   
+00001a17  uxTaskResetEventItemValue              
+00001a41  ulTaskGenericNotifyTake                
+00001b09  xTaskGenericNotifyWait                 
+00001c05  xTaskGenericNotify                     
+00001deb  xTaskGenericNotifyFromISR              
+00002041  vTaskGenericNotifyGiveFromISR          
+000021f1  xTaskGenericNotifyStateClear           
+00002259  ulTaskGenericNotifyValueClear          
+00002395  __TI_printfi                           
+00002de3  __aeabi_idiv0                          
+00002de3  __aeabi_ldiv0                          
+00002de5  Port_Init                              
+00003175  Port_SetPinDirection                   
+000032c9  Port_RefreshPortDirection              
+00003413  Port_GetVersionInfo                    
+00003499  Port_SetPinMode                        
+00003789  APP_start                              
+00003791  APP_init                               
+000038b1  Task                                   
+000038b9  vButtonTask                            
+00003985  vRunTimeMeasurementsTask               
+00003b75  Dio_Init                               
+00003b99  Dio_WriteChannel                       
+00003c79  Dio_ReadChannel                        
+00003d41  Dio_FlipChannel                        
+00003e5d  pxPortInitialiseStack                  
+00003ee9  xPortStartScheduler                    
+00003fa1  vPortEndScheduler                      
+00003fc5  vPortEnterCritical                     
+00004007  vPortExitCritical                      
+00004033  xPortSysTickHandler                    
+00004059  vPortSetupTimerInterrupt               
+00004075  vPortValidateInterruptPriority         
+000045a3  UART0_Init                             
+000045e3  UART0_SendByte                         
+000045ff  UART0_ReceiveByte                      
+0000460f  UART0_SendString                       
+00004635  UART0_SendInteger                      
+00004715  __aeabi_dsub                           
+0000471f  __aeabi_dadd                           
+00004a09  __aeabi_ddiv                           
+00004b3f  vListInitialise                        
+00004b6f  vListInitialiseItem                    
+00004b7f  vListInsertEnd                         
+00004bbb  vListInsert                            
+00004c21  uxListRemove                           
+00004d8d  ldexp                                  
+00004d8d  ldexpl                                 
+00004d8d  scalbn                                 
+00004d8d  scalbnl                                
+00004e9d  __aeabi_dmul                           
+00004fa9  ulPortGetIPSR                          
+00004fc1  xPortPendSVHandler                     
+00005021  vPortSVCHandler                        
+00005041  vPortStartFirstTask                    
+00005065  vPortEnableVFP                         
+00005075  pvPortMalloc                           
+00005101  vPortFree                              
+00005125  vPortInitialiseBlocks                  
+0000512d  xPortGetFreeHeapSize                   
+000051f7  __aeabi_memcpy                         
+000051f7  __aeabi_memcpy4                        
+000051f7  __aeabi_memcpy8                        
+000051f7  memcpy                                 
+00005293  __aeabi_uldivmod                       
+00005329  __aeabi_cdcmpeq                        
+00005329  __aeabi_cdcmple                        
+000053af  __aeabi_cdrcmple                       
+00005435  ADC0_EnableCLock                       
+00005441  ADC0_ReadChannel                       
+000054b5  __aeabi_memclr                         
+000054b5  __aeabi_memclr4                        
+000054b5  __aeabi_memclr8                        
+000054b7  __aeabi_memset                         
+000054b7  __aeabi_memset4                        
+000054b7  __aeabi_memset8                        
+000054bd  memset                                 
+0000559d  __aeabi_ldivmod                        
+0000560b  __TI_decompress_lzss                   
+00005675  frexp                                  
+00005675  frexpl                                 
+00005731  GPTM_WTimer0Init                       
+00005761  GPTM_WTimer0Read                       
+00005785  __TI_ltoa                              
+0000582d  atoi                                   
+00005879  __aeabi_d2iz                           
+000058c1  __TI_auto_init_nobinit_nopinit         
+00005905  sprintf                                
+00005985  _c_int00_noargs                        
+000059b9  __aeabi_i2d                            
+000059e7  memccpy                                
+00005a03  copysign                               
+00005a03  copysignl                              
+00005a35  Det_ReportError                        
+00005a4b  strchr                                 
+00005a61  strcpy                                 
+00005a75  strlen                                 
+00005a89  wcslen                                 
+00005a9b  __TI_decompress_none                   
+00005aa9  __TI_zero_init                         
+00005ab5  main                                   
+00005ac1  ResetISR                               
+00005ad9  __aeabi_errno_addr                     
+00005ae1  _system_pre_init                       
+00005ae5  C$$EXIT                                
+00005ae5  abort                                  
+00005ae8  Port_Configuration                     
+00005c15  _ctypes_                               
+00005d16  Dio_Configuration                      
+00005d20  ulMaxSyscallInterruptPriority          
+00005d28  uxTopUsedPriority                      
+00005d54  __TI_Handler_Table_Base                
+00005d60  __TI_Handler_Table_Limit               
+00005d68  __TI_CINIT_Base                        
+00005d78  __TI_CINIT_Limit                       
+20000000  __start___llvm_prf_cnts                
+20000000  __stop___llvm_prf_cnts                 
+20004000  DiagnosticsArray                       
+200052bc  Control_Task_Handler                   
+200052c0  Display_Task_Handler                   
+200052c4  Driver_Button_Task_Handler             
+200052c8  Driver_Seat_Heater_Task_Handler        
+200052cc  Driver_Seat_Temp_Read_Task_Handler     
+200052d0  Driving_Wheel_Button_Task_Handler      
+200052d4  Failure_Task_Handler                   
+200052d8  Passanger_Button_Task_Handler          
+200052dc  Passanger_Seat_Heater_Task_Handler     
+200052e0  Passanger_Seat_Temp_Read_Task_Handler  
+200052e8  __stack                                
+200054e8  __STACK_END                            
+200054e8  __STACK_TOP                            
+200054e8  pxCurrentTCB                           
+2000552c  DriverSeatConsoleButtonTaskParameter   
+20005534  DrivingWheelButtonTaskParameter        
+2000553c  PassengerSeatConsoleButtonTaskParameter
+2000555a  Diagnostics_index                      
+2000555c  g_ucDriverSeatState                    
+2000555d  g_ucPassengerSeatState                 
+20005560  errno                                  
+ffffffff  __TI_pprof_out_hndl                    
+ffffffff  __TI_prof_data_size                    
+ffffffff  __TI_prof_data_start                   
+ffffffff  __binit__                              
+ffffffff  __c_args__                             
+ffffffff  binit                                  
+UNDEFED   __mpu_init                             
+UNDEFED   _system_post_cinit                     
 
-[175 symbols]
+[183 symbols]

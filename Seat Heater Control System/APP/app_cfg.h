@@ -22,11 +22,14 @@
 
 
 
-/* Tasks Periods */
+/* Tasks periodicity in Ticks */
 
-
-
-#define RUNTIME_MEASUREMENTS_TASK_PERIODICITY (5000u)
+#define BUTTON_TASK_PERIODICITY                         (150u)
+#define TEMP_READ_TASK_PERIODICITY                      (5000u)
+#define SEAT_HEATER_TASK_PERIODICITY                    (5000u)
+#define CONTROL_TASK_PERIODICITY                        (5000u)
+#define DISPLAY_TASK_PERIODICITY                        (5000u)
+#define RUNTIME_MEASUREMENTS_TASK_PERIODICITY           (5000u)
 
 
 #endif
