@@ -20,11 +20,13 @@
 #define FAILURE_OCCURED                     (0xFF)
 #define HEATING_IS_OFF                      (0x00)
 #define HEATING_LEVEL_CHANGED_TO_LOW        (0x01)
-#define HEATING_LEVEL_CHANGED_TO_MED        (0x01)
-#define HEATING_LEVEL_CHANGED_TO_HIGH       (0x01)
+#define HEATING_LEVEL_CHANGED_TO_MED        (0x02)
+#define HEATING_LEVEL_CHANGED_TO_HIGH       (0x03)
 
 
-
+/* Seats */
+#define DRIVER_SEAT                         (0u)
+#define PASSENGER_SEAT                      (1u)
 
 
 /*******************************************************************************
@@ -47,6 +49,24 @@ typedef struct
     uint8 *ButtonStateVarAddress;
 
 }ButtonTaskParameterType;
+
+/* Temp Read Task Parameter Type */
+typedef struct
+{
+    uint8 Channel;
+    uint8 *TempVarAddress;
+
+}TempReadTaskParameterType;
+
+/* Control Task Parameter Type */
+typedef struct
+{
+    uint8 Seat;
+    uint8 *DesiredTempStateVarAddress;
+    uint8 *SeatTempVarAddress;
+    uint8 *HeatingIntensityLevel;
+
+}ControlTaskParameterType;
 
 /*******************************************************************************
  *                             Functions Prototypes                            *

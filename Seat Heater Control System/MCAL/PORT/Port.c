@@ -201,8 +201,8 @@ void Port_Init(const Port_ConfigType* ConfigPtr)
 					/* Clear the corresponding bit in the GPIOAMSEL register to disable analog functionality on this pin */
 					CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)PortGpio_Ptr + PORT_ANALOG_MODE_SEL_REG_OFFSET) , pinNum);  
 					
-					/* Disable Alternative function for this pin by clear the corresponding bit in GPIOAFSEL register */
-					CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)PortGpio_Ptr + PORT_ALT_FUNC_REG_OFFSET) , pinNum);   
+                    /* Enable Alternative function for this pin by setting the corresponding bit in GPIOAFSEL register */
+                    SET_BIT(*(volatile uint32 *)((volatile uint8 *)PortGpio_Ptr + PORT_ALT_FUNC_REG_OFFSET) , pinNum);
 					
 					/* Clear the PMCx bits for this pin */
 					*(volatile uint32 *)((volatile uint8 *)PortGpio_Ptr + PORT_CTL_REG_OFFSET) &= ~(0x0000000F << (pinNum * 4));

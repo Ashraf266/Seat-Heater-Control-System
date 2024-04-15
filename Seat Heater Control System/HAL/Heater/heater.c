@@ -11,7 +11,7 @@
 
 
 
-void HEATER_setHeatingIntensity(uint8 HeatingIntensity)
+void HEATER_setHeatingIntensity(uint8 HeaterID, uint8 HeatingIntensity)
 {
     /* NOTHING IS HERE */
 

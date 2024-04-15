@@ -16,7 +16,7 @@
 /*******************************************************************************
  *                         Private Functions Definitions                       *
  *******************************************************************************/
-
+#if 0
 static void GPIO_SetupUART0Pins(void)
 {
     SYSCTL_RCGCGPIO_REG  |= 0x01;         /* Enable clock for GPIO PORTA */
@@ -30,7 +30,7 @@ static void GPIO_SetupUART0Pins(void)
     GPIO_PORTA_PCTL_REG  = (GPIO_PORTA_PCTL_REG & 0xFFFFFF00) | 0x00000011;
     GPIO_PORTA_DEN_REG   |= 0x03;         /* Enable Digital I/O on PA0 & PA1 */
 }
-
+#endif
 /*******************************************************************************
  *                         Public Functions Definitions                        *
  *******************************************************************************/
@@ -38,7 +38,8 @@ static void GPIO_SetupUART0Pins(void)
 void UART0_Init(void) /* UART0 configuration: 1 start, 8 bits data, No Parity, 1 stop bit and 9600BPS */
 {
     /* Setup UART0 pins PA0 --> U0RX & PA1 --> U0TX */
-    GPIO_SetupUART0Pins();
+    /* Port Driver Initializes it */
+    /* GPIO_SetupUART0Pins(); */
     
     SYSCTL_RCGCUART_REG |= 0x01;          /* Enable clock for UART0 */
     while(!(SYSCTL_PRUART_REG & 0x01));   /* Wait until UART0 clock is activated and it is ready for access*/

@@ -24,7 +24,10 @@
 
 /* function prototypes */
 void Task(void *pvParameters);
+void vButtonTask(void *pvParameters);
 void vRunTimeMeasurementsTask(void *pvParameters);
+void vTempReadTask(void *pvParameters);
+void vControlTask(void *pvParameters);
 
 
 /*******************************************************************************
@@ -59,6 +62,24 @@ ButtonTaskParameterType DriverSeatConsoleButtonTaskParameter = {DioConf_SW1_CHAN
 ButtonTaskParameterType PassengerSeatConsoleButtonTaskParameter = {DioConf_SW2_CHANNEL_NUM, &g_ucPassengerSeatState};
 
 
+/* Global Variables for Temperature */
+uint8 g_u8DriverSeatTemp = 0;
+uint8 g_u8PassengerSeatTemp = 0;
+
+/* Parameters for Temp Read Tasks */
+TempReadTaskParameterType DriverSeatTempReadTaskParameter = {SENSOR_1_CHANNEL_ID, &g_u8DriverSeatTemp};
+TempReadTaskParameterType PassengerSeatTempReadTaskParameter = {SENSOR_2_CHANNEL_ID, &g_u8PassengerSeatTemp};
+
+
+/* Global Variables for Heating Intensity */
+uint8_t g_u8DriverSeatHeaterIntensity = 0;
+uint8_t g_u8PassengerSeatHeaterIntensity = 0;
+
+/* Parameters for Control Tasks */
+ControlTaskParameterType DriverSeatControlTaskParameter = {DRIVER_SEAT, &g_ucDriverSeatState, &g_u8DriverSeatTemp, &g_u8DriverSeatHeaterIntensity};
+ControlTaskParameterType PassangerSeatControlTaskParameter = {PASSENGER_SEAT, &g_ucPassengerSeatState, &g_u8PassengerSeatTemp, &g_u8PassengerSeatHeaterIntensity};
+
+
 /*******************************************************************************
  *                             Functions Definition                            *
  *******************************************************************************/
@@ -91,7 +112,7 @@ void APP_init(void)
 
     /* --------------Tasks Creation-------------- */
 
-    xTaskCreate(Task,
+    xTaskCreate(vButtonTask,
                 "Driving Wheel Button Task",
                 256,
                 (void *)&DrivingWheelButtonTaskParameter,
@@ -99,7 +120,7 @@ void APP_init(void)
                 &Driving_Wheel_Button_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vButtonTask,
                 "Driver Seat Console Button Task",
                 256,
                 (void *)&DriverSeatConsoleButtonTaskParameter,
@@ -107,7 +128,7 @@ void APP_init(void)
                 &Driver_Button_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vButtonTask,
                 "Passenger Seat Console Button Task",
                 256,
                 (void *)&PassengerSeatConsoleButtonTaskParameter,
@@ -115,18 +136,18 @@ void APP_init(void)
                 &Passanger_Button_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vTempReadTask,
                 "Driver Seat Temp Read Task",
                 256,
-                NULL,
+                (void *)&DriverSeatTempReadTaskParameter,
                 MEDIUM_PRIORITY,
                 &Driver_Seat_Temp_Read_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vTempReadTask,
                 "Passenger Seat Temp Read Task",
                 256,
-                NULL,
+                (void *)&PassengerSeatTempReadTaskParameter,
                 MEDIUM_PRIORITY,
                 &Passanger_Seat_Temp_Read_Task_Handler);
 
@@ -155,18 +176,18 @@ void APP_init(void)
                 &Display_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vControlTask,
                 "Driver Seat Control Task",
                 256,
-                NULL,
+                (void *)&DriverSeatControlTaskParameter,
                 MEDIUM_PRIORITY,
                 &Control_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vControlTask,
                 "Passenger Seat Control Task",
                 256,
-                NULL,
+                (void *)&PassangerSeatControlTaskParameter,
                 MEDIUM_PRIORITY,
                 &Control_Task_Handler);
 
@@ -256,6 +277,113 @@ void vButtonTask(void *pvParameters)
 
 
 
+void vTempReadTask(void *pvParameters)
+{
+    TempReadTaskParameterType *TempSensor = pvParameters;
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+
+#if DEBUGGING_MODE_ACTIVATED == 1
+    uint16_t ADC_Value = 0;
+#endif
+
+    for(;;)
+    {
+
+        vTaskDelayUntil( &xLastWakeTime, TEMP_READ_TASK_PERIODICITY );
+
+
+#if DEBUGGING_MODE_ACTIVATED == 1
+        /* Read ADC value */
+        ADC_Value = ADC0_ReadChannel((channel_no)TempSensor->Channel);
+
+        /* Get Temp Value and store it */
+        *(TempSensor->TempVarAddress) = (float)ADC_Value * 45 / ADC_MAXIMUM_VALUE;
+#else
+
+        /* Read Temp Sensor */
+        *(TempSensor->TempVarAddress) = LM35_getTemperature((channel_no)TempSensor->TempVarAddress);
+
+#endif
+    }
+
+}
+
+
+
+
+void vControlTask(void *pvParameters)
+{
+    ControlTaskParameterType *Seat = (ControlTaskParameterType *)pvParameters;
+    uint8_t Temp = 0;
+    uint8_t HeatingState = 0;
+    uint8_t DesiredTemp = 0;
+    signed char TempDiff = 0;
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+
+    for(;;)
+    {
+        vTaskDelayUntil( &xLastWakeTime, CONTROL_TASK_PERIODICITY );
+        Temp = *(Seat->SeatTempVarAddress);
+        HeatingState = *(Seat->DesiredTempStateVarAddress);
+
+        /* Check if Temp out of range */
+        if (Temp > 40 || Temp < 5)
+        {
+            //signal an event to the failure Task
+
+            continue;
+        }
+
+        /* Calculate Desired Temp */
+        /* NOTE: can be wrapped in a function */
+        switch( HeatingState )
+        {
+            case 0:
+                DesiredTemp = Temp;
+                break;
+
+            case 1:
+                DesiredTemp = 25;
+                break;
+
+            case 2:
+                DesiredTemp = 30;
+                break;
+
+            case 3:
+                DesiredTemp = 35;
+                break;
+        }
+
+        /* Temp Difference */
+        TempDiff = DesiredTemp - Temp;
+
+        /* check for off */
+        if(  TempDiff <= 2 )
+        {
+            *(Seat->HeatingIntensityLevel) = 0;
+        }
+        /* check for low */
+        else if( TempDiff > 2 && TempDiff <= 5 )
+        {
+            *(Seat->HeatingIntensityLevel) = 1;
+        }
+        /* check for medium */
+        else if( TempDiff > 5 && TempDiff <= 10 )
+        {
+            *(Seat->HeatingIntensityLevel) = 2;
+        }
+        /* check for High */
+        else
+        {
+            *(Seat->HeatingIntensityLevel) = 3;
+        }
+
+
+    }
+
+
+}
 
 
 
@@ -277,4 +405,6 @@ void vRunTimeMeasurementsTask(void *pvParameters)
 
     }
 }
+
+
 
