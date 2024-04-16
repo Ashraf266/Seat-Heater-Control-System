@@ -36,7 +36,7 @@
 #define DIO_FLIP_CHANNEL_API                (STD_ON)
 
 /* Number of the configured Dio Channels */
-#define DIO_CONFIGURED_CHANNLES              (5U)
+#define DIO_CONFIGURED_CHANNLES              (6U)
 
 /* Channel Index in the array of structures in Dio_PBcfg.c */
 #define DioConf_SW1_CHANNEL_ID_INDEX         (uint8)0x00
@@ -44,6 +44,7 @@
 #define DioConf_RED_LED_CHANNEL_ID_INDEX     (uint8)0x02
 #define DioConf_BLUE_LED_CHANNEL_ID_INDEX    (uint8)0x03
 #define DioConf_GREEN_LED_CHANNEL_ID_INDEX   (uint8)0x04
+#define DioConf_SW3_CHANNEL_ID_INDEX         (uint8)0x05
 
 /* DIO Configured Port ID's  */
 #define DioConf_RED_LED_PORT_NUM             (Dio_PortType)5 /* PORTF */
@@ -51,6 +52,7 @@
 #define DioConf_GREEN_LED_PORT_NUM           (Dio_PortType)5 /* PORTF */
 #define DioConf_SW1_PORT_NUM                 (Dio_PortType)5 /* PORTF */
 #define DioConf_SW2_PORT_NUM                 (Dio_PortType)5 /* PORTF */
+#define DioConf_SW3_PORT_NUM                 (Dio_PortType)0 /* PORTA */
 
 /* DIO Configured Channel ID's */
 #define DioConf_RED_LED_CHANNEL_NUM          (Dio_ChannelType)1 /* Pin 1 in PORTF */
@@ -58,5 +60,6 @@
 #define DioConf_GREEN_LED_CHANNEL_NUM        (Dio_ChannelType)3 /* Pin 3 in PORTF */
 #define DioConf_SW1_CHANNEL_NUM              (Dio_ChannelType)4 /* Pin 4 in PORTF */
 #define DioConf_SW2_CHANNEL_NUM              (Dio_ChannelType)0 /* Pin 0 in PORTF */
+#define DioConf_SW3_CHANNEL_NUM              (Dio_ChannelType)7 /* Pin 7 in PORTA */
 
 #endif /* DIO_CFG_H */

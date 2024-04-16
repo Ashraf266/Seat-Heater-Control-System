@@ -11,7 +11,7 @@
 
 /* Application running Mode */
 
-#define DEBUGGING_MODE_ACTIVATED            (1u)
+#define DEBUGGING_MODE_ACTIVATED            (1)
 
 
 
@@ -26,9 +26,9 @@
 
 #define BUTTON_TASK_PERIODICITY                         (150u)
 #define TEMP_READ_TASK_PERIODICITY                      (500u)
-#define SEAT_HEATER_TASK_PERIODICITY                    (5000u)
+#define SEAT_HEATER_TASK_PERIODICITY                    (700u)
 #define CONTROL_TASK_PERIODICITY                        (600u)
-#define DISPLAY_TASK_PERIODICITY                        (5000u)
+#define DISPLAY_TASK_PERIODICITY                        (1000u)
 #define RUNTIME_MEASUREMENTS_TASK_PERIODICITY           (5000u)
 
 

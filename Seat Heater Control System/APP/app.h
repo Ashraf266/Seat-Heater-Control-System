@@ -17,7 +17,8 @@
 
 
 /* Diagnostics */
-#define FAILURE_OCCURED                     (0xFF)
+#define DRIVER_SEAT_SYS_FAILURE             (0xF0)
+#define PASSENGER_SEAT_SYS_FAILURE          (0xF1)
 #define HEATING_IS_OFF                      (0x00)
 #define HEATING_LEVEL_CHANGED_TO_LOW        (0x01)
 #define HEATING_LEVEL_CHANGED_TO_MED        (0x02)
@@ -67,6 +68,31 @@ typedef struct
     uint8 *HeatingIntensityLevel;
 
 }ControlTaskParameterType;
+
+/* Heater Task Parameter Type */
+typedef struct
+{
+    uint8 Seat;
+#if DEBUGGING_MODE_ACTIVATED
+    uint8 BlueLED_ID;
+    uint8 GreenLED_ID;
+#endif
+    uint8 *HeatingIntensityLevel;
+
+}HeaterTaskParameterType;
+
+
+/* Failure Task Parameter Type */
+typedef struct
+{
+    uint8 Seat;
+    uint8 RedLED_ID;
+#if DEBUGGING_MODE_ACTIVATED
+    uint8 BlueLED_ID;
+    uint8 GreenLED_ID;
+#endif
+
+}FailureTaskParameterType;
 
 /*******************************************************************************
  *                             Functions Prototypes                            *

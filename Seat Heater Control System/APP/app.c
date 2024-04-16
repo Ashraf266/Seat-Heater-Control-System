@@ -6,7 +6,6 @@
  */
 
 #include "app.h"
-#include "app_private.h"
 #include "Port.h"
 #include "Dio.h"
 #include "uart0.h"
@@ -16,18 +15,23 @@
 #include "lm35.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "event_groups.h"
 
 
 
 
 
-/* function prototypes */
-void Task(void *pvParameters);
+/*******************************************************************************
+ *                             Functions Prototypes                            *
+ *******************************************************************************/
 void vButtonTask(void *pvParameters);
+#if DEBUGGING_MODE_ACTIVATED == 1
 void vRunTimeMeasurementsTask(void *pvParameters);
+#endif
 void vTempReadTask(void *pvParameters);
 void vControlTask(void *pvParameters);
+void vHeaterTask(void *pvParameters);
+void vFailureHandlingTask(void *pvParameters);
+void vDisplayTask(void *pvParameters);
 
 
 /*******************************************************************************
@@ -43,8 +47,10 @@ TaskHandle_t Passanger_Seat_Temp_Read_Task_Handler;
 TaskHandle_t Driver_Seat_Heater_Task_Handler;
 TaskHandle_t Passanger_Seat_Heater_Task_Handler;
 TaskHandle_t Display_Task_Handler;
-TaskHandle_t Control_Task_Handler;
-TaskHandle_t Failure_Task_Handler;
+TaskHandle_t Driver_Seat_Control_Task_Handler;
+TaskHandle_t Passenger_Seat_Control_Task_Handler;
+TaskHandle_t Driver_Seat_Failure_Task_Handler;
+TaskHandle_t Passenger_Seat_Failure_Task_Handler;
 
 
 /* Diagnostics */
@@ -57,9 +63,9 @@ uint8_t g_ucDriverSeatState = 0;
 uint8_t g_ucPassengerSeatState = 0;
 
 /* Parameters for Button Tasks */
-ButtonTaskParameterType DrivingWheelButtonTaskParameter = {DioConf_SW1_CHANNEL_NUM, &g_ucDriverSeatState};
-ButtonTaskParameterType DriverSeatConsoleButtonTaskParameter = {DioConf_SW1_CHANNEL_NUM, &g_ucDriverSeatState};
-ButtonTaskParameterType PassengerSeatConsoleButtonTaskParameter = {DioConf_SW2_CHANNEL_NUM, &g_ucPassengerSeatState};
+ButtonTaskParameterType DrivingWheelButtonTaskParameter = {DioConf_SW1_CHANNEL_ID_INDEX, &g_ucDriverSeatState};
+ButtonTaskParameterType DriverSeatConsoleButtonTaskParameter = {DioConf_SW3_CHANNEL_ID_INDEX, &g_ucDriverSeatState};
+ButtonTaskParameterType PassengerSeatConsoleButtonTaskParameter = {DioConf_SW2_CHANNEL_ID_INDEX, &g_ucPassengerSeatState};
 
 
 /* Global Variables for Temperature */
@@ -78,6 +84,34 @@ uint8_t g_u8PassengerSeatHeaterIntensity = 0;
 /* Parameters for Control Tasks */
 ControlTaskParameterType DriverSeatControlTaskParameter = {DRIVER_SEAT, &g_ucDriverSeatState, &g_u8DriverSeatTemp, &g_u8DriverSeatHeaterIntensity};
 ControlTaskParameterType PassangerSeatControlTaskParameter = {PASSENGER_SEAT, &g_ucPassengerSeatState, &g_u8PassengerSeatTemp, &g_u8PassengerSeatHeaterIntensity};
+
+
+/* Parameters for Heater Tasks */
+HeaterTaskParameterType DriverSeatHeaterTaskParameter = {DRIVER_SEAT
+#if DEBUGGING_MODE_ACTIVATED
+                                                         ,DioConf_BLUE_LED_CHANNEL_ID_INDEX,DioConf_GREEN_LED_CHANNEL_ID_INDEX
+#endif
+                                                         ,&g_u8DriverSeatHeaterIntensity
+};
+HeaterTaskParameterType PassengerSeatHeaterTaskParameter = {PASSENGER_SEAT
+#if DEBUGGING_MODE_ACTIVATED
+                                                            ,DioConf_BLUE_LED_CHANNEL_ID_INDEX, DioConf_GREEN_LED_CHANNEL_ID_INDEX
+#endif
+                                                            ,&g_u8PassengerSeatHeaterIntensity
+};
+
+
+/* Parameters for Failure Handling Tasks */
+FailureTaskParameterType DriverSeatFailureTaskParameter = {DRIVER_SEAT,DioConf_RED_LED_CHANNEL_ID_INDEX
+#if DEBUGGING_MODE_ACTIVATED
+                                                         ,DioConf_BLUE_LED_CHANNEL_ID_INDEX, DioConf_GREEN_LED_CHANNEL_ID_INDEX
+#endif
+};
+FailureTaskParameterType PassengerSeatFailureTaskParameter = {PASSENGER_SEAT,DioConf_RED_LED_CHANNEL_ID_INDEX
+#if DEBUGGING_MODE_ACTIVATED
+                                                            ,DioConf_BLUE_LED_CHANNEL_ID_INDEX, DioConf_GREEN_LED_CHANNEL_ID_INDEX
+#endif
+};
 
 
 /*******************************************************************************
@@ -152,23 +186,23 @@ void APP_init(void)
                 &Passanger_Seat_Temp_Read_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vHeaterTask,
                 "Driver Seat Heater Task",
                 256,
-                NULL,
+                (void *)&DriverSeatHeaterTaskParameter,
                 MEDIUM_PRIORITY,
                 &Driver_Seat_Heater_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vHeaterTask,
                 "Passenger Seat Heater Task",
                 256,
-                NULL,
+                (void *)&PassengerSeatHeaterTaskParameter,
                 MEDIUM_PRIORITY,
                 &Passanger_Seat_Heater_Task_Handler);
 
 
-    xTaskCreate(Task,
+    xTaskCreate(vDisplayTask,
                 "Display Task",
                 256,
                 NULL,
@@ -181,7 +215,7 @@ void APP_init(void)
                 256,
                 (void *)&DriverSeatControlTaskParameter,
                 MEDIUM_PRIORITY,
-                &Control_Task_Handler);
+                &Driver_Seat_Control_Task_Handler);
 
 
     xTaskCreate(vControlTask,
@@ -189,16 +223,24 @@ void APP_init(void)
                 256,
                 (void *)&PassangerSeatControlTaskParameter,
                 MEDIUM_PRIORITY,
-                &Control_Task_Handler);
+                &Passenger_Seat_Control_Task_Handler);
 
 
-    xTaskCreate(Task,
-                "Failure Handling Task",
+    xTaskCreate(vFailureHandlingTask,
+                "Driver Seat Failure Handling Task",
                 256,
-                NULL,
+                (void *)&DriverSeatFailureTaskParameter,
                 HIGH_PRIORITY,
-                &Failure_Task_Handler);
+                &Driver_Seat_Failure_Task_Handler);
 
+    xTaskCreate(vFailureHandlingTask,
+                "Passenger Seat Failure Handling Task",
+                256,
+                (void *)&PassengerSeatFailureTaskParameter,
+                HIGH_PRIORITY,
+                &Passenger_Seat_Failure_Task_Handler);
+
+#if DEBUGGING_MODE_ACTIVATED == 1
 
     xTaskCreate(vRunTimeMeasurementsTask,
                 "Run time Measurements",
@@ -206,22 +248,9 @@ void APP_init(void)
                 NULL,
                 LOW_PRIORITY,
                 NULL);
+#endif
 
 }
-
-
-/* ------- Temp Task ------- */
-void Task(void *pvParameters)
-{
-
-    for(;;)
-    {
-
-    }
-
-}
-
-
 
 
 
@@ -301,7 +330,7 @@ void vTempReadTask(void *pvParameters)
 #else
 
         /* Read Temp Sensor */
-        *(TempSensor->TempVarAddress) = LM35_getTemperature((channel_no)TempSensor->TempVarAddress);
+        *(TempSensor->TempVarAddress) = LM35_getTemperature((channel_no)TempSensor->Channel);
 
 #endif
     }
@@ -329,7 +358,16 @@ void vControlTask(void *pvParameters)
         /* Check if Temp out of range */
         if (Temp > 40 || Temp < 5)
         {
-            //signal an event to the failure Task
+            switch(Seat->Seat)
+            {
+            case 0:
+                vTaskResume(Driver_Seat_Failure_Task_Handler);
+                break;
+
+            case 1:
+                vTaskResume(Passenger_Seat_Failure_Task_Handler);
+                break;
+            }
 
             continue;
         }
@@ -387,6 +425,193 @@ void vControlTask(void *pvParameters)
 
 
 
+void vHeaterTask(void *pvParameters)
+{
+    HeaterTaskParameterType* Heater = pvParameters;
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    for(;;)
+    {
+        vTaskDelayUntil( &xLastWakeTime, SEAT_HEATER_TASK_PERIODICITY );
+
+        /* Turn on Heater on the intensity evaluated by the control task */
+        HEATER_setHeatingIntensity(Heater->Seat, *(Heater->HeatingIntensityLevel));
+
+#if DEBUGGING_MODE_ACTIVATED
+
+        switch(*(Heater->HeatingIntensityLevel))
+        {
+        case 0:/* OFF */
+            /* Turn off LEDs */
+            Dio_WriteChannel(Heater->BlueLED_ID, STD_LOW);
+            Dio_WriteChannel(Heater->GreenLED_ID, STD_LOW);
+            break;
+        case 1:/* Low Intensity */
+            /* Turn on Green LED */
+            Dio_WriteChannel(Heater->BlueLED_ID, STD_LOW);
+            Dio_WriteChannel(Heater->GreenLED_ID, STD_HIGH);
+            break;
+        case 2:/* Med Intensity */
+            /* Turn on Blue LED */
+            Dio_WriteChannel(Heater->BlueLED_ID, STD_HIGH);
+            Dio_WriteChannel(Heater->GreenLED_ID, STD_LOW);
+            break;
+        case 3:/* High Intensity */
+            /* Turn on Green & Blue (Cyan)  LED */
+            Dio_WriteChannel(Heater->BlueLED_ID, STD_HIGH);
+            Dio_WriteChannel(Heater->GreenLED_ID, STD_HIGH);
+            break;
+        }
+
+#endif
+
+    }
+
+}
+
+
+
+void vFailureHandlingTask(void *pvParameters)
+{
+    FailureTaskParameterType *Fail = pvParameters;
+
+    for(;;)
+    {
+        vTaskSuspend(NULL);
+        switch(Fail->Seat)
+        {
+        case 0:
+
+#if DEBUGGING_MODE_ACTIVATED
+            Dio_WriteChannel(Fail->BlueLED_ID, STD_LOW);
+            Dio_WriteChannel(Fail->GreenLED_ID, STD_LOW);
+#endif
+            /* Turn on Red LED */
+            Dio_WriteChannel(Fail->RedLED_ID, STD_HIGH);
+
+            /* Stop All Driver Seat Heating Activities */
+            vTaskSuspend(Driving_Wheel_Button_Task_Handler);
+            vTaskSuspend(Driver_Button_Task_Handler);
+            vTaskSuspend(Driver_Seat_Temp_Read_Task_Handler);
+            vTaskSuspend(Driver_Seat_Heater_Task_Handler);
+            vTaskSuspend(Driver_Seat_Control_Task_Handler);
+
+            g_ucDriverSeatState = 0xFF;
+
+            /* Adding Diagnostics */
+            taskENTER_CRITICAL();/* ----------- Critical Section ----------- */
+
+            DiagnosticsArray[Diagnostics_index].Action = DRIVER_SEAT_SYS_FAILURE;
+            DiagnosticsArray[Diagnostics_index].TimeStamp = GPTM_WTimer0Read();
+            Diagnostics_index++;
+
+            taskEXIT_CRITICAL(); /* ----------- Critical Section ----------- */
+
+            break;
+
+        case 1:
+
+#if DEBUGGING_MODE_ACTIVATED
+            Dio_WriteChannel(Fail->BlueLED_ID, STD_LOW);
+            Dio_WriteChannel(Fail->GreenLED_ID, STD_LOW);
+#endif
+            /* Turn on Red LED */
+            Dio_WriteChannel(Fail->RedLED_ID, STD_HIGH);
+
+            /* Stop All Passenger Seat Heating Activities */
+            vTaskSuspend(Passanger_Button_Task_Handler);
+            vTaskSuspend(Passanger_Seat_Temp_Read_Task_Handler);
+            vTaskSuspend(Passanger_Seat_Heater_Task_Handler);
+            vTaskSuspend(Passenger_Seat_Control_Task_Handler);
+
+            g_ucPassengerSeatState = 0xFF;
+
+            /* Adding Diagnostics */
+            taskENTER_CRITICAL();/* ----------- Critical Section ----------- */
+
+            DiagnosticsArray[Diagnostics_index].Action = PASSENGER_SEAT_SYS_FAILURE;
+            DiagnosticsArray[Diagnostics_index].TimeStamp = GPTM_WTimer0Read();
+            Diagnostics_index++;
+
+            taskEXIT_CRITICAL(); /* ----------- Critical Section ----------- */
+
+            break;
+        }
+
+
+    }
+
+}
+
+
+void vDisplayTask(void *pvParameters)
+{
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+
+    for(;;)
+    {
+        vTaskDelayUntil( &xLastWakeTime, DISPLAY_TASK_PERIODICITY );
+
+        UART0_SendString("Driver Seat Heating Level: ");
+        switch(g_ucDriverSeatState)
+        {
+        case 0:
+            UART0_SendString("OFF\r\n");
+            break;
+
+        case 1:
+            UART0_SendString("LOW\r\n");
+            break;
+
+        case 2:
+            UART0_SendString("MED\r\n");
+            break;
+
+        case 3:
+            UART0_SendString("HIGH\r\n");
+            break;
+
+        default:
+            UART0_SendString("ERROR!!!\r\n");
+            break;
+        }
+        UART0_SendString("Driver Seat Temperature: ");
+        UART0_SendInteger(g_u8DriverSeatTemp);
+        UART0_SendString(" C\r\n");
+
+        UART0_SendString("Passenger Seat Heating Level: ");
+        switch(g_ucPassengerSeatState)
+        {
+        case 0:
+            UART0_SendString("OFF\r\n");
+            break;
+
+        case 1:
+            UART0_SendString("LOW\r\n");
+            break;
+
+        case 2:
+            UART0_SendString("MED\r\n");
+            break;
+
+        case 3:
+            UART0_SendString("HIGH\r\n");
+            break;
+
+        default:
+            UART0_SendString("ERROR!!!\r\n");
+            break;
+        }
+        UART0_SendString("Passenger Seat Temperature: ");
+        UART0_SendInteger(g_u8PassengerSeatTemp);
+        UART0_SendString(" C\r\n");
+
+    }
+
+}
+
+
+#if DEBUGGING_MODE_ACTIVATED == 1
+
 void vRunTimeMeasurementsTask(void *pvParameters)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -405,6 +630,8 @@ void vRunTimeMeasurementsTask(void *pvParameters)
 
     }
 }
+
+#endif
 
 
 

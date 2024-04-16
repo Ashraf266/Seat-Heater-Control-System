@@ -4780,3 +4780,745 @@ Finished building target: "Seat Heater Control System.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 207: error #20: identifier "vRunTimeMeasurementsTask" is undefined
+"../APP/app.c", line 308: warning #770-D: conversion from pointer to smaller integer
+1 error detected in the compilation of "../APP/app.c".
+gmake: *** [APP/app.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 221: error #66: expected a ";"
+"../APP/app.c", line 256: warning #12-D: parsing restarts here after previous syntax error
+"../APP/app.c", line 261: error #20: identifier "Button" is undefined
+"../APP/app.c", line 269: warning #78-D: this declaration has no storage class or type specifier
+"../APP/app.c", line 270: error #171: expected a declaration
+"../APP/app.c", line 310: warning #12-D: parsing restarts here after previous syntax error
+"../APP/app.c", line 313: error #171: expected a declaration
+"../APP/app.c", line 365: warning #12-D: parsing restarts here after previous syntax error
+"../APP/app.c", line 368: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+5 errors detected in the compilation of "../APP/app.c".
+gmake: *** [APP/app.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 312: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 311: warning #770-D: conversion from pointer to smaller integer
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'Seat Heater Control System.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../MCAL/DIO/Dio_PBcfg.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="MCAL/DIO/Dio_PBcfg.d_raw" --obj_directory="MCAL/DIO"  "../MCAL/DIO/Dio_PBcfg.c"
+Finished building: "../MCAL/DIO/Dio_PBcfg.c"
+ 
+Building file: "../MCAL/PORT/Port_PBcfg.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="MCAL/PORT/Port_PBcfg.d_raw" --obj_directory="MCAL/PORT"  "../MCAL/PORT/Port_PBcfg.c"
+Finished building: "../MCAL/PORT/Port_PBcfg.c"
+ 
+Building file: "../MCAL/DIO/Dio.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="MCAL/DIO/Dio.d_raw" --obj_directory="MCAL/DIO"  "../MCAL/DIO/Dio.c"
+Finished building: "../MCAL/DIO/Dio.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP/app.h", line 80: warning #66-D: expected a ";"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"..\APP\app.h", line 80: warning #66-D: expected a ";"
+"../APP/app.c", line 411: warning #179-D: variable "Heater" was declared but never referenced
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 411: warning #179-D: variable "Heater" was declared but never referenced
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 186: error #20: identifier "vHeaterTask" is undefined
+"../APP/app.c", line 226: error #20: identifier "vFailureHandlingTask" is undefined
+"../APP/app.c", line 478: warning #179-D: variable "Fail" was declared but never referenced
+2 errors detected in the compilation of "../APP/app.c".
+gmake: *** [APP/app.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+"../APP/app.c", line 480: warning #179-D: variable "Fail" was declared but never referenced
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 9: fatal error #1965: cannot open source file "app_private.h"
+1 catastrophic error detected in the compilation of "../APP/app.c".
+Compilation terminated.
+gmake: *** [APP/app.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 516: error #66: expected a ";"
+1 error detected in the compilation of "../APP/app.c".
+gmake: *** [APP/app.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'Seat Heater Control System.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+ 
+>> Compilation failure
+APP/subdir_rules.mk:9: recipe for target 'APP/app.obj' failed
+"../APP/app.c", line 42: error #131: expected a "{"
+"../APP/app.c", line 66: warning #12-D: parsing restarts here after previous syntax error
+"../APP/app.c", line 66: error #20: identifier "g_ucDriverSeatState" is undefined
+"../APP/app.c", line 66: warning #176-D: expression has no effect
+"../APP/app.c", line 66: error #66: expected a ";"
+"../APP/app.c", line 67: error #20: identifier "g_ucDriverSeatState" is undefined
+"../APP/app.c", line 68: error #20: identifier "g_ucPassengerSeatState" is undefined
+"../APP/app.c", line 152: error #20: identifier "DrivingWheelButtonTaskParameter" is undefined
+"../APP/app.c", line 154: error #20: identifier "Driving_Wheel_Button_Task_Handler" is undefined
+"../APP/app.c", line 162: error #20: identifier "Driver_Button_Task_Handler" is undefined
+"../APP/app.c", line 170: error #20: identifier "Passanger_Button_Task_Handler" is undefined
+"../APP/app.c", line 178: error #20: identifier "Driver_Seat_Temp_Read_Task_Handler" is undefined
+"../APP/app.c", line 186: error #20: identifier "Passanger_Seat_Temp_Read_Task_Handler" is undefined
+"../APP/app.c", line 194: error #20: identifier "Driver_Seat_Heater_Task_Handler" is undefined
+"../APP/app.c", line 202: error #20: identifier "Passanger_Seat_Heater_Task_Handler" is undefined
+"../APP/app.c", line 210: error #20: identifier "Display_Task_Handler" is undefined
+"../APP/app.c", line 218: error #20: identifier "Driver_Seat_Control_Task_Handler" is undefined
+"../APP/app.c", line 226: error #20: identifier "Passenger_Seat_Control_Task_Handler" is undefined
+"../APP/app.c", line 234: error #20: identifier "Driver_Seat_Failure_Task_Handler" is undefined
+"../APP/app.c", line 241: error #20: identifier "Passenger_Seat_Failure_Task_Handler" is undefined
+"../APP/app.c", line 284: error #20: identifier "DiagnosticsArray" is undefined
+"../APP/app.c", line 284: error #20: identifier "Diagnostics_index" is undefined
+"../APP/app.c", line 483: error #20: identifier "Driving_Wheel_Button_Task_Handler" is undefined
+"../APP/app.c", line 484: error #20: identifier "Driver_Button_Task_Handler" is undefined
+"../APP/app.c", line 485: error #20: identifier "Driver_Seat_Temp_Read_Task_Handler" is undefined
+"../APP/app.c", line 486: error #20: identifier "Driver_Seat_Heater_Task_Handler" is undefined
+"../APP/app.c", line 487: error #20: identifier "Driver_Seat_Control_Task_Handler" is undefined
+"../APP/app.c", line 503: error #20: identifier "Passanger_Button_Task_Handler" is undefined
+"../APP/app.c", line 504: error #20: identifier "Passanger_Seat_Temp_Read_Task_Handler" is undefined
+"../APP/app.c", line 505: error #20: identifier "Passanger_Seat_Heater_Task_Handler" is undefined
+"../APP/app.c", line 506: error #20: identifier "Passenger_Seat_Control_Task_Handler" is undefined
+"../APP/app.c", line 519: error #249: function "vDisplayTask" has already been defined
+30 errors detected in the compilation of "../APP/app.c".
+gmake: *** [APP/app.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'Seat Heater Control System.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../APP/app.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/APP" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/Heater" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/HAL/LM35" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/Common" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/UART" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/GPTM" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/ADC" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/DIO" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/MCAL/PORT" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/include" --include_path="D:/Study/Embedded/EDGES RTOS/Final Project/TM4C/Project/Seat Heater Control System/FreeRTOS/Source/portable/CCS/ARM_CM4F" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="APP/app.d_raw" --obj_directory="APP"  "../APP/app.c"
+Finished building: "../APP/app.c"
+ 
+Building target: "Seat Heater Control System.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Seat Heater Control System.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Seat Heater Control System_linkInfo.xml" --rom_model -o "Seat Heater Control System.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./APP/app.obj" "./FreeRTOS/Source/event_groups.obj" "./FreeRTOS/Source/list.obj" "./FreeRTOS/Source/queue.obj" "./FreeRTOS/Source/tasks.obj" "./FreeRTOS/Source/timers.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./FreeRTOS/Source/portable/MemMang/heap_1.obj" "./HAL/Heater/heater.obj" "./HAL/LM35/lm35.obj" "./MCAL/ADC/adc.obj" "./MCAL/DIO/Dio.obj" "./MCAL/DIO/Dio_PBcfg.obj" "./MCAL/GPTM/GPTM.obj" "./MCAL/PORT/Det.obj" "./MCAL/PORT/Port.obj" "./MCAL/PORT/Port_PBcfg.obj" "./MCAL/UART/uart0.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Seat Heater Control System.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Seat Heater Control System ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'Seat Heater Control System.out' is up to date.
+
+**** Build Finished ****

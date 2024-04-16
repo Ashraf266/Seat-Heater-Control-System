@@ -6,7 +6,6 @@ APP/app.obj: ../APP/app_cfg.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/std_types.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h
-APP/app.obj: ../APP/app_private.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port_Cfg.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Common_Macros.h
@@ -37,8 +36,6 @@ APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Hea
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/mpu_wrappers.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/task.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/list.h
-APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/event_groups.h
-APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/timers.h
 
 ../APP/app.c:
 
@@ -51,8 +48,6 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h:
-
-../APP/app_private.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port.h:
 
@@ -113,8 +108,4 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/task.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/list.h:
-
-D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/event_groups.h:
-
-D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/FreeRTOS/Source/include/timers.h:
 

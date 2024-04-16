@@ -45,5 +45,6 @@ const Dio_ConfigType Dio_Configuration = {
                                           DioConf_SW2_PORT_NUM,DioConf_SW2_CHANNEL_NUM,
                                           DioConf_RED_LED_PORT_NUM,DioConf_RED_LED_CHANNEL_NUM,
                                           DioConf_BLUE_LED_PORT_NUM,DioConf_BLUE_LED_CHANNEL_NUM,
-                                          DioConf_GREEN_LED_PORT_NUM,DioConf_GREEN_LED_CHANNEL_NUM
+                                          DioConf_GREEN_LED_PORT_NUM,DioConf_GREEN_LED_CHANNEL_NUM,
+                                          DioConf_SW3_PORT_NUM,DioConf_SW3_CHANNEL_NUM
 };
