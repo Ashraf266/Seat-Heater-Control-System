@@ -142,6 +142,9 @@ void APP_init(void)
     /* Initialize ADC */
     ADC0_EnableCLock();
 
+    /* Initialize GPTM */
+    GPTM_WTimer0Init();
+
 
 
     /* --------------Tasks Creation-------------- */
@@ -343,9 +346,9 @@ void vTempReadTask(void *pvParameters)
 void vControlTask(void *pvParameters)
 {
     ControlTaskParameterType *Seat = (ControlTaskParameterType *)pvParameters;
-    uint8_t Temp = 0;
-    uint8_t HeatingState = 0;
-    uint8_t DesiredTemp = 0;
+    uint8 Temp = 0;
+    uint8 HeatingState = 0;
+    uint8 DesiredTemp = 0;
     signed char TempDiff = 0;
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
@@ -373,7 +376,6 @@ void vControlTask(void *pvParameters)
         }
 
         /* Calculate Desired Temp */
-        /* NOTE: can be wrapped in a function */
         switch( HeatingState )
         {
             case 0:
@@ -496,6 +498,7 @@ void vFailureHandlingTask(void *pvParameters)
             vTaskSuspend(Driver_Seat_Control_Task_Handler);
 
             g_ucDriverSeatState = 0xFF;
+            g_u8DriverSeatHeaterIntensity = 0xFF;
 
             /* Adding Diagnostics */
             taskENTER_CRITICAL();/* ----------- Critical Section ----------- */
@@ -524,6 +527,8 @@ void vFailureHandlingTask(void *pvParameters)
             vTaskSuspend(Passenger_Seat_Control_Task_Handler);
 
             g_ucPassengerSeatState = 0xFF;
+            g_u8PassengerSeatHeaterIntensity = 0xFF;
+
 
             /* Adding Diagnostics */
             taskENTER_CRITICAL();/* ----------- Critical Section ----------- */
@@ -551,6 +556,20 @@ void vDisplayTask(void *pvParameters)
     {
         vTaskDelayUntil( &xLastWakeTime, DISPLAY_TASK_PERIODICITY );
 
+        /* ------------- Driver Seat ------------- */
+        if(g_u8DriverSeatTemp > 40 || g_u8DriverSeatTemp < 5)
+        {
+            UART0_SendString("Driver Seat Temperature: ");
+            UART0_SendString("ERROR!!!\r\n");
+        }
+        else
+        {
+            UART0_SendString("Driver Seat Temperature: ");
+            UART0_SendInteger(g_u8DriverSeatTemp);
+            UART0_SendString(" C\r\n");
+        }
+
+
         UART0_SendString("Driver Seat Heating Level: ");
         switch(g_ucDriverSeatState)
         {
@@ -574,9 +593,46 @@ void vDisplayTask(void *pvParameters)
             UART0_SendString("ERROR!!!\r\n");
             break;
         }
-        UART0_SendString("Driver Seat Temperature: ");
-        UART0_SendInteger(g_u8DriverSeatTemp);
-        UART0_SendString(" C\r\n");
+
+        UART0_SendString("Driver Seat Heater Intensity: ");
+        switch(g_u8DriverSeatHeaterIntensity)
+        {
+        case 0:
+            UART0_SendString("OFF\r\n");
+            break;
+
+        case 1:
+            UART0_SendString("LOW\r\n");
+            break;
+
+        case 2:
+            UART0_SendString("MED\r\n");
+            break;
+
+        case 3:
+            UART0_SendString("HIGH\r\n");
+            break;
+
+        default:
+            UART0_SendString("ERROR!!!\r\n");
+            break;
+        }
+
+
+        /* ------------- Passenger Seat ------------- */
+
+        if(g_u8PassengerSeatTemp > 40 || g_u8PassengerSeatTemp < 5)
+        {
+            UART0_SendString("Passenger Seat Temperature: ");
+            UART0_SendString("ERROR!!!\r\n");
+        }
+        else
+        {
+            UART0_SendString("Passenger Seat Temperature: ");
+            UART0_SendInteger(g_u8PassengerSeatTemp);
+            UART0_SendString(" C\r\n");
+        }
+
 
         UART0_SendString("Passenger Seat Heating Level: ");
         switch(g_ucPassengerSeatState)
@@ -601,9 +657,30 @@ void vDisplayTask(void *pvParameters)
             UART0_SendString("ERROR!!!\r\n");
             break;
         }
-        UART0_SendString("Passenger Seat Temperature: ");
-        UART0_SendInteger(g_u8PassengerSeatTemp);
-        UART0_SendString(" C\r\n");
+
+        UART0_SendString("Passenger Seat Heater Intensity: ");
+        switch(g_u8PassengerSeatHeaterIntensity)
+        {
+        case 0:
+            UART0_SendString("OFF\r\n");
+            break;
+
+        case 1:
+            UART0_SendString("LOW\r\n");
+            break;
+
+        case 2:
+            UART0_SendString("MED\r\n");
+            break;
+
+        case 3:
+            UART0_SendString("HIGH\r\n");
+            break;
+
+        default:
+            UART0_SendString("ERROR!!!\r\n");
+            break;
+        }
 
     }
 
@@ -615,7 +692,7 @@ void vDisplayTask(void *pvParameters)
 void vRunTimeMeasurementsTask(void *pvParameters)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    static uint8 cRuntimeStatBuffer[ 512 ];
+    static uint8 cRuntimeStatBuffer[ 1024 ];
     for (;;)
     {
         vTaskDelayUntil(&xLastWakeTime, RUNTIME_MEASUREMENTS_TASK_PERIODICITY);
