@@ -7,6 +7,7 @@ APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Hea
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Platform_Types.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port.h
+APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Det.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port_Cfg.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Common_Macros.h
 APP/app.obj: D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/DIO/Dio.h
@@ -50,6 +51,8 @@ D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/Common/Compiler.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port.h:
+
+D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Det.h:
 
 D:/Study/Embedded/EDGES\ RTOS/Final\ Project/TM4C/Project/Seat\ Heater\ Control\ System/MCAL/PORT/Port_Cfg.h:
 

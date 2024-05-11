@@ -12,7 +12,7 @@
 #ifndef DIO_REGS_H
 #define DIO_REGS_H
 
-#include "Std_Types.h"
+#include "std_Types.h"
 
 #define GPIO_PORTA_DATA_REG       (*((volatile uint32 *)0x400043FC))
 #define GPIO_PORTB_DATA_REG       (*((volatile uint32 *)0x400053FC))

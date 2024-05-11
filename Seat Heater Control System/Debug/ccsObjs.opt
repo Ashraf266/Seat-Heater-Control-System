@@ -8,7 +8,7 @@
 "./FreeRTOS/Source/timers.obj"
 "./FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj"
 "./FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj"
-"./FreeRTOS/Source/portable/MemMang/heap_1.obj"
+"./FreeRTOS/Source/portable/MemMang/heap_2.obj"
 "./HAL/Heater/heater.obj"
 "./HAL/LM35/lm35.obj"
 "./MCAL/ADC/adc.obj"

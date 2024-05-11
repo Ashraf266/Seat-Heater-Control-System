@@ -43,7 +43,7 @@
 #define DIO_NOT_INITIALIZED            (0U)
 
 /* Standard AUTOSAR types */
-#include "Std_Types.h"
+#include "std_Types.h"
 
 /* AUTOSAR checking between Std Types and Dio Modules */
 #if ((STD_TYPES_AR_RELEASE_MAJOR_VERSION != DIO_AR_RELEASE_MAJOR_VERSION)\

@@ -6,12 +6,13 @@
  *
  * Description: Header file for TM4C123GH6PM Microcontroller - Port Driver Registers
  *
- * Author: Mohamed Ashraf
+ * Author: Mohamed Hassan
  ******************************************************************************/
 
 #ifndef PORT_REGS_H
 #define PORT_REGS_H
 
+#include "std_types.h"
 
 /* GPIO Registers base addresses */
 #define GPIO_PORTA_BASE_ADDRESS           0x40004000
@@ -33,7 +34,7 @@
 #define PORT_ANALOG_MODE_SEL_REG_OFFSET   0x528
 #define PORT_CTL_REG_OFFSET               0x52C
 
-/* RCC reg to Enable PORTS clock */
-#define SYSCTL_REGCGC2_REG        (*((volatile uint32 *)0x400FE108))
+/*Magic Number Used To Unlock And Write In The Commit Register*/
+#define GPIO_UNLOCK_COMMIT 0x4C4F434B
 
 #endif /* PORT_REGS_H */

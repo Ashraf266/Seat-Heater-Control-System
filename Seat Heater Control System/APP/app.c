@@ -114,6 +114,12 @@ FailureTaskParameterType PassengerSeatFailureTaskParameter = {PASSENGER_SEAT,Dio
 };
 
 
+
+/* Run Time Measurements */
+uint32 ullTasksOutTime[14];
+uint32 ullTasksInTime[14];
+uint32 ullTasksTotalTime[14];
+
 /*******************************************************************************
  *                             Functions Definition                            *
  *******************************************************************************/
@@ -252,6 +258,23 @@ void APP_init(void)
                 LOW_PRIORITY,
                 NULL);
 #endif
+
+
+/* Set Tags */
+    vTaskSetApplicationTaskTag( Driving_Wheel_Button_Task_Handler, ( void * ) 1 );
+    vTaskSetApplicationTaskTag( Driver_Button_Task_Handler, ( void * ) 2 );
+    vTaskSetApplicationTaskTag( Passanger_Button_Task_Handler, ( void * ) 3 );
+    vTaskSetApplicationTaskTag( Driver_Seat_Temp_Read_Task_Handler, ( void * ) 4 );
+    vTaskSetApplicationTaskTag( Passanger_Seat_Temp_Read_Task_Handler, ( void * ) 5 );
+    vTaskSetApplicationTaskTag( Driver_Seat_Heater_Task_Handler, ( void * ) 6 );
+    vTaskSetApplicationTaskTag( Passanger_Seat_Heater_Task_Handler, ( void * ) 7 );
+    vTaskSetApplicationTaskTag( Passanger_Seat_Heater_Task_Handler, ( void * ) 8 );
+    vTaskSetApplicationTaskTag( Display_Task_Handler, ( void * ) 9 );
+    vTaskSetApplicationTaskTag( Driver_Seat_Control_Task_Handler, ( void * ) 10 );
+    vTaskSetApplicationTaskTag( Passenger_Seat_Control_Task_Handler, ( void * ) 11 );
+    vTaskSetApplicationTaskTag( Driver_Seat_Failure_Task_Handler, ( void * ) 12 );
+    vTaskSetApplicationTaskTag( Passenger_Seat_Failure_Task_Handler, ( void * ) 13 );
+
 
 }
 
@@ -691,6 +714,8 @@ void vDisplayTask(void *pvParameters)
 
 void vRunTimeMeasurementsTask(void *pvParameters)
 {
+
+#if 0
     TickType_t xLastWakeTime = xTaskGetTickCount();
     static uint8 cRuntimeStatBuffer[ 1024 ];
     for (;;)
@@ -705,6 +730,28 @@ void vRunTimeMeasurementsTask(void *pvParameters)
         UART0_SendString( cRuntimeStatBuffer );
         taskEXIT_CRITICAL();
 
+    }
+
+#endif
+
+
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    for (;;)
+    {
+        uint8 ucCounter, ucCPU_Load;
+        uint32 ullTotalTasksTime = 0;
+        vTaskDelayUntil(&xLastWakeTime, RUNTIME_MEASUREMENTS_TASK_PERIODICITY);
+        for(ucCounter = 1; ucCounter < 14; ucCounter++)
+        {
+            ullTotalTasksTime += ullTasksTotalTime[ucCounter];
+        }
+        ucCPU_Load = (ullTotalTasksTime * 100) /  GPTM_WTimer0Read();
+
+        taskENTER_CRITICAL();
+        UART0_SendString("CPU Load is ");
+        UART0_SendInteger(ucCPU_Load);
+        UART0_SendString("% \r\n");
+        taskEXIT_CRITICAL();
     }
 }
 

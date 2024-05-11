@@ -74,6 +74,10 @@
 #define INCLUDE_vTaskDelay                      1
 
 #define INCLUDE_vTaskSuspend                    1
+
+/* Set the following configUSE_* constants to 1 to include the named feature in
+ * the build, or 0 to exclude the named feature from the build. */
+#define configUSE_APPLICATION_TASK_TAG         1
 /******************************************************************************/
 /* Hook and callback function related definitions. ****************************/
 /******************************************************************************/
@@ -121,6 +125,7 @@ PRIORITY THAN THIS! (higher priorities are lower numeric values. */
 /* FreeRTOS Runtime Statistics. ***********************************************/
 /******************************************************************************/
 
+#if 0
 /* Set configGENERATE_RUN_TIME_STATS to 1 to enable collection of run-time statistics.
  * When this is done, both portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()
  * and portGET_RUN_TIME_COUNTER_VALUE() or portALT_GET_RUN_TIME_COUNTER_VALUE(x) must also be defined. */
@@ -148,5 +153,23 @@ PRIORITY THAN THIS! (higher priorities are lower numeric values. */
  * undefined. */
 #define configUSE_TRACE_FACILITY             1
 
+#endif
+
+extern uint32 ullTasksOutTime[14];
+extern uint32 ullTasksInTime[14];
+extern uint32 ullTasksTotalTime[14];
+
+#define traceTASK_SWITCHED_IN()                                    \
+do{                                                                \
+    uint32 taskInTag = (uint32)(pxCurrentTCB->pxTaskTag);          \
+    ullTasksInTime[taskInTag] = GPTM_WTimer0Read();                \
+}while(0);
+
+#define traceTASK_SWITCHED_OUT()                                                                 \
+do{                                                                                              \
+    uint32 taskOutTag = (uint32)(pxCurrentTCB->pxTaskTag);                                       \
+    ullTasksOutTime[taskOutTag] = GPTM_WTimer0Read();                                            \
+    ullTasksTotalTime[taskOutTag] += ullTasksOutTime[taskOutTag] - ullTasksInTime[taskOutTag];   \
+}while(0);
 
 #endif /* FREERTOS_CONFIG_H */
